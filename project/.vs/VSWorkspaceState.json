@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Battle",
+    "\\Library",
+    "\\Library\\Entities",
+    "\\obj",
+    "\\obj\\Debug",
+    "\\obj\\Debug\\netcoreapp3.1",
+    "\\Rooms",
+    "\\TextRender"
+  ],
+  "SelectedNode": "\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,51 +1,65 @@
 ﻿using System;
 using System.Threading;
-
-namespace project
+using ProgramLibrary;
+using Text;
+namespace Program
 {
-    class Program : Logic
+    class Program : Methods
     {
         static void Main()
         {
+            Menu menu = new Menu();
+
             //UTF-8
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             //Introduction
-            Introduction();
+            menu.Introduction();
 
-            while (GameLogic.play)
+            while (true)
             {
                 //Create a menu with the specified header and alternatives
-                int input = Menu(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
+                int input = TextRender.Table(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
 
                 // Depending on input give different results
                 switch (input)
                 {
                     //Play game
                     case 1:
+                        CurrentRun run = new CurrentRun();
                         //While gamelogic
-                        while (GameLogic.playAgain)
+                        // while (run.playAgain)
                         {
+                            run = new CurrentRun();
+                            Player player = new Player(attack: 30);
+                            player.PlayerDeathEventHandler += Battles.CBattle.player_PlayerDeathEventHandler;
+
+                            Room[] rooms = new Room[9];
+                            for (int i = 0; i < 9; i++)
+                            {
+                                rooms[i] = new Room();
+                            }
                             //Intro dialog
-                            Greetings();
-                            Quest();
-                            EnterMaze();
+                            menu.Greetings();
+
+                            Goblin g = new Goblin(attack: 20);
+                            Battles.CBattle.Battle(player, g);
 
                             //While the game isn't over
-                            while (!IsGameOver())
+                            // while (IsGameOver(player) == false)
                             {
                                 //Go to the room indicated by Gamelogic
-                                InitRoom(GameLogic.currentRoom);
-                                if (IsGameOver()) break;
+                                // InitRoom(player, rooms, CurrentRun.currentRoom);
                             }
 
                             //Play again yes/no
-                            IsPlayAgain();
+                            // IsPlayAgain();
                         }
+
                         break;
                     case 2:
                         //Change settings of game
-                        Settings();
+                        menu.Settings();
                         break;
                     case 3:
                         //End program
