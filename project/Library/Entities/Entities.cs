@@ -1,18 +1,31 @@
 using System;
 using Text;
 
-namespace ProgramLibrary
+namespace ProgramLibrary.Entities
 {
+    public interface IEntityBase
+    {
+        int _health { get; }
+        int shield { get; }
+        double attack { get; }
+        double defense { get; }
+        int crit { get; }
+        bool _alive { get; }
+        EntityType entityType { get; }
+
+        void TakeDamage(double damage);
+    }
+
     //Fundamental stats for entities
     public abstract class EntityBase
     {
-        public int _health { get; private protected set; }
-        public int shield { get; set; }
-        public double attack { get; set; }
-        public double defense { get; set; }
-        public int crit { get; set; }
-        public bool _alive { get; private protected set; }
-        public EntityType entityType { get; set; }
+        public abstract int _health { get; set; }
+        public abstract int shield { get; set; }
+        public abstract double attack { get; set; }
+        public abstract double defense { get; set; }
+        public abstract int crit { get; set; }
+        public abstract bool _alive { get; private protected set; }
+        public abstract EntityType entityType { get; set; }
 
         // public virtual bool Battle(Func<Player, Enemy, bool> isVictory)
         // {
@@ -36,9 +49,10 @@ namespace ProgramLibrary
     }
 
     //Player stats and flags
-    public class Player : EntityBase
+    public class Player : EntityBase, IEntityBase
     {
         public event EventHandler<PlayerDeathEventArgs> PlayerDeathEventHandler;
+        public override int shield { get; set; }
         public int maxhealth { get; set; }
         public int stupidity { get; private set; } = 0;
         public bool hasChestKey { get; set; } = false;

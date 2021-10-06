@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Text;
+using ProgramLibrary.Entities;
 
 namespace ProgramLibrary
 {
