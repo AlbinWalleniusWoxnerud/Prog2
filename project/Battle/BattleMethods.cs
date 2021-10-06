@@ -8,7 +8,7 @@ namespace Battles
 {
     static partial class CBattle
     {
-        public static void CalculateBattleResult<T, U>(T attacker, U defender) where T : EntityBase where U : EntityBase
+        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending) where T : EntityBase where U : EntityBase
         {
             double damage = attacker.attack * defender.defense;
             TextRender.Render("Damage dealt reduced by ", sameLine: true);
