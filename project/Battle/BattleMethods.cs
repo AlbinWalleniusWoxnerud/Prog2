@@ -1,14 +1,15 @@
 using System;
 using System.Threading;
-using ProgramLibrary;
+using Library;
 using Text;
 using System.Collections.Generic;
+using Library.Entities;
 
 namespace Battles
 {
-    static partial class CBattle
+    static partial class Battle
     {
-        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending) where T : EntityBase where U : EntityBase
+        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
         {
             double damage = attacker.attack * defender.defense;
             TextRender.Render("Damage dealt reduced by ", sameLine: true);
@@ -73,7 +74,7 @@ namespace Battles
             TextRender.Render("");
         }
 
-        public static bool CheckIfWinner(Player player, Enemy enemy)
+        public static bool CheckIfWinner(Player player, EnemyBase enemy)
         {
             if (enemy._health <= 0)
             {
@@ -92,7 +93,7 @@ namespace Battles
             }
             return false;
         }
-        public static bool CheckIfWinnerFinalFight(Player player, Enemy enemy)
+        public static bool CheckIfWinnerFinalFight(Player player, EnemyBase enemy)
         {
             if (enemy._health <= 0)
             {

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Threading;
-using ProgramLibrary;
+using Library;
+using Library.Entities;
+using Library.Entities.Enemies;
+using Battles;
 using Text;
 namespace Program
 {
@@ -32,7 +35,7 @@ namespace Program
                         {
                             run = new CurrentRun();
                             Player player = new Player(attack: 30);
-                            player.PlayerDeathEventHandler += Battles.CBattle.player_PlayerDeathEventHandler;
+                            player.PlayerDeathEventHandler += Battles.Battle.player_PlayerDeathEventHandler;
 
                             Room[] rooms = new Room[9];
                             for (int i = 0; i < 9; i++)
@@ -43,7 +46,7 @@ namespace Program
                             menu.Greetings();
 
                             Goblin g = new Goblin(attack: 20);
-                            Battles.CBattle.Battle(player, g);
+                            Battle.Combat(player, g);
 
                             //While the game isn't over
                             // while (IsGameOver(player) == false)

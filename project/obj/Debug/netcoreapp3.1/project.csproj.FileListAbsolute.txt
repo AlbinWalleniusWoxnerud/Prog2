@@ -57,3 +57,10 @@ D:\Private-CSharp\tenta\project\bin\Debug\netcoreapp3.1\project.dll
 D:\Private-CSharp\tenta\project\bin\Debug\netcoreapp3.1\project.pdb
 D:\Private-CSharp\tenta\project\obj\Debug\netcoreapp3.1\project.genruntimeconfig.cache
 D:\Private-CSharp\tenta\project\obj\Debug\netcoreapp3.1\project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.csproj.AssemblyReference.cache
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.AssemblyInfoInputs.cache
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.AssemblyInfo.cs
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.csproj.CoreCompileInputs.cache
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.dll
+D:\Prog2\project\obj\Debug\netcoreapp3.1\project.pdb

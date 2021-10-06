@@ -1,13 +1,14 @@
 using System;
 using System.Threading;
-using ProgramLibrary;
+using Library;
+using Library.Entities;
 using Text;
 
 namespace Battles
 {
-    static partial class CBattle
+    static partial class Battle
     {
-        public static bool Battle(Player player, Enemy enemy)
+        public static bool Combat(Player player, EnemyBase enemy)
         {
 
             //First combat with a goblin
@@ -34,7 +35,7 @@ namespace Battles
                         TextRender.Render(".");
                         TextRender.Render("");
                         // PlayerAttack(player, enemy);
-                        CalculateBattleResult<Player, Enemy>(player, enemy);
+                        CalculateBattleResult<Player, EnemyBase>(player, enemy, isPlayerChooseDefend);
                         break;
                     case 2:
                         isPlayerChooseDefend = true;

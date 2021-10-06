@@ -1,6 +1,6 @@
 using System;
 
-namespace ProgramLibrary
+namespace Library
 {
     //Room logic, or rather room eventflags 
     public interface IRoom
