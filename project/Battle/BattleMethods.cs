@@ -1,15 +1,15 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Library;
-using Text;
-using System.Collections.Generic;
 using Library.Entities;
+using Text;
 
 namespace Battles
 {
     static partial class Battle
     {
-        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
+        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending) where T : EntityBase where U : EntityBase
         {
             double damage = attacker.attack * defender.defense;
             TextRender.Render("Damage dealt reduced by ", sameLine: true);
@@ -24,38 +24,42 @@ namespace Battles
                 damage *= 2;
             }
 
-            if ((defender.shield - damage) >= 0)
+
+            if (IsPlayerDefending)
             {
-                //Cast damage to int 
-                defender.shield -= (int)damage;
+                if ((defender.shield - damage) >= 0)
+                {
+                    //Cast damage to int 
+                    defender.shield -= (int)damage;
 
-                TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
-                TextRender.Render($" damage blocked by {defender.entityType}'s shield.");
-                TextRender.Render($"{defender.entityType} has ", sameLine: true);
-                TextRender.Render($"{defender.shield}", sameLine: true, color: Text.Color.White);
-                TextRender.Render(" remaining shield.");
-            }
+                    TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render($" damage blocked by {defender.entityType}'s shield.");
+                    TextRender.Render($"{defender.entityType} has ", sameLine: true);
+                    TextRender.Render($"{defender.shield}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render(" remaining shield.");
+                }
 
-            //If the attack destoys the shield
-            else if ((defender.shield - damage) < 0 && defender.shield > 0)
-            {
-                TextRender.Render($"{damage - defender.shield}", sameLine: true, color: Text.Color.White);
-                TextRender.Render($" damage blocked by {defender.entityType}'s shield.");
+                //If the attack destoys the shield
+                else if ((defender.shield - damage) < 0 && defender.shield > 0)
+                {
+                    TextRender.Render($"{damage - defender.shield}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render($" damage blocked by {defender.entityType}'s shield.");
 
-                //Remaining damage after shield blocked some of it
-                damage -= defender.shield;
+                    //Remaining damage after shield blocked some of it
+                    damage -= defender.shield;
 
-                //defender shield is destoyed since (defenderShield - damage) was less than 0
-                defender.shield = 0;
-                TextRender.Render($"{defender.entityType} shield was destroyed.", color: Text.Color.White);
-                TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
-                TextRender.Render($" was dealt directly to {defender.entityType} HP.");
+                    //defender shield is destoyed since (defenderShield - damage) was less than 0
+                    defender.shield = 0;
+                    TextRender.Render($"{defender.entityType} shield was destroyed.", color: Text.Color.White);
+                    TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render($" was dealt directly to {defender.entityType} HP.");
 
-                defender.TakeDamage(damage);
+                    defender.TakeDamage(damage);
 
-                TextRender.Render($"{defender.entityType} has ", sameLine: true);
-                TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
-                TextRender.Render(" HP remaining.");
+                    TextRender.Render($"{defender.entityType} has ", sameLine: true);
+                    TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render(" HP remaining.");
+                }
             }
 
             //Enemies shield is destroyed so deal damage directly to defender hp

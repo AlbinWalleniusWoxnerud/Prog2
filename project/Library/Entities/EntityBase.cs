@@ -1,6 +1,6 @@
 namespace Library.Entities
 {
-    public abstract class EntityBase
+    public abstract class EntityBase : IEntityBase
     {
         public virtual int _health { get; private protected set; }
         public virtual int shield { get; set; }

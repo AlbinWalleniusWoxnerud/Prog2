@@ -1,7 +1,7 @@
 namespace Library.Entities
 {
     //Enemies, inherit stats from EntityBase class, every enemy has different default initialization stats
-    public abstract class EnemyBase : EntityBase
+    public abstract class EnemyBase
     {
         public override int _health { get; private protected set; }
         public override int shield { get; set; }

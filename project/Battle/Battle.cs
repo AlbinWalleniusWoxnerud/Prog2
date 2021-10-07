@@ -58,7 +58,7 @@ namespace Battles
 
                 //Call the playergetsattack method with the stats of the enemy, this also makes it easy to scale up
                 // PlayerGetsAttacked(player, enemy, isPlayerChooseDefend);
-                CalculateBattleResult(enemy, player);
+                CalculateBattleResult(enemy, player, isPlayerChooseDefend);
 
                 //If there is a winner here the player lost therefore return false
                 if (CheckIfWinner(player, enemy)) return false;

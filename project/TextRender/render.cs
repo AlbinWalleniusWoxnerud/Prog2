@@ -18,7 +18,7 @@ namespace Text
             foreach (char letter in text)
             {
                 Console.Write(letter);
-                Thread.Sleep(Speed);
+                Thread.Sleep(speed);
             }
             Thread.Sleep(Delay);
             Console.ResetColor();

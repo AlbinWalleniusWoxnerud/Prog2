@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\githubschool\\Private-CSharp\\tenta\\project\\project.csproj": {}
+    "C:\\githubschool\\Prog2\\project\\project.csproj": {}
   },
   "projects": {
-    "C:\\githubschool\\Private-CSharp\\tenta\\project\\project.csproj": {
+    "C:\\githubschool\\Prog2\\project\\project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\githubschool\\Private-CSharp\\tenta\\project\\project.csproj",
+        "projectUniqueName": "C:\\githubschool\\Prog2\\project\\project.csproj",
         "projectName": "project",
-        "projectPath": "C:\\githubschool\\Private-CSharp\\tenta\\project\\project.csproj",
+        "projectPath": "C:\\githubschool\\Prog2\\project\\project.csproj",
         "packagesPath": "C:\\Users\\albin.walleniuswoxn\\.nuget\\packages\\",
-        "outputPath": "C:\\githubschool\\Private-CSharp\\tenta\\project\\obj\\",
+        "outputPath": "C:\\githubschool\\Prog2\\project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\albin.walleniuswoxn\\AppData\\Roaming\\NuGet\\NuGet.Config",
