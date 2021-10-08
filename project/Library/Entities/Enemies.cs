@@ -10,8 +10,9 @@ namespace Library.Entities
             {
             }
 
-            private protected override void EntityDeath() : base(this,new EnemyDeathEventArgs())
+            private protected override void EntityDeath()
             {
+                base.EntityDeath(this, new EnemyDeathEventArgs(this.entityType));
             }
         }
         internal class HobGoblin : EnemyBase

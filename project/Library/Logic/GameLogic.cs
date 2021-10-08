@@ -16,10 +16,12 @@ namespace Library
     public class EnemyDeathEventArgs : EventArgs
     {
         public DateTime TimeOfDeath { get; private set; }
+        public EntityType DeadEnemyType { get; init; }
 
-        public EnemyDeathEventArgs()
+        public EnemyDeathEventArgs(EntityType e)
         {
             TimeOfDeath = DateTime.Now;
+            DeadEnemyType = e;
         }
     }
     internal class Methods

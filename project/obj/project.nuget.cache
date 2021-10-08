@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v4uVQCTcJQe1jZl0MdCIc/K8v0w4mQ2Bw80lKyrLzgnsSvYuT2uPby0h6w0spSxIe4YfKHnuo8E9CWqg8+SbqA==",
+  "dgSpecHash": "2NBDrJgzGyDvLBiLloemjgD/x47klBf3nGILXymTaCIWftUDHHccf/S0DqqM2j5mxDDCSeByGbpCsL9IRsuLyw==",
   "success": true,
-  "projectFilePath": "C:\\githubschool\\Prog2\\project\\project.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\albin.walleniuswoxn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\albin.walleniuswoxn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.15\\microsoft.netcore.app.host.win-x64.3.1.15.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Prog2\\project\\project.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,3 +1,4 @@
+using System;
 namespace Library.Entities
 {
     public abstract class EntityBase : IEntityBase

@@ -35,7 +35,10 @@ namespace Program
                         {
                             run = new CurrentRun();
                             Player player = new Player(attack: 30, shield: 200);
+                            Goblin g = new Goblin(attack: 20);
                             player.PlayerDeathEventHandler += Battles.Battle.player_PlayerDeathEventHandler;
+                            g.EnemyDeathEventHandler += Battles.Battle.enemy_EnemyDeathEventHandler;
+
 
                             Room[] rooms = new Room[9];
                             for (int i = 0; i < 9; i++)
@@ -45,7 +48,6 @@ namespace Program
                             //Intro dialog
                             menu.Greetings();
 
-                            Goblin g = new Goblin(attack: 20, health: 300);
                             Battle.Combat(player, g);
 
                             //While the game isn't over

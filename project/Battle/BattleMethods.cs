@@ -120,5 +120,9 @@ namespace Battles
         {
             Console.WriteLine($"The player died at {e.TimeOfDeath}.");
         }
+        public static void enemy_EnemyDeathEventHandler(Object sender, EnemyDeathEventArgs e)
+        {
+            Console.WriteLine($"The enemy died at {e.TimeOfDeath}.");
+        }
     }
 }
