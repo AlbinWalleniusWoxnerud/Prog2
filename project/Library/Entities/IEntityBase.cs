@@ -1,4 +1,6 @@
-namespace ProgramLibrary.Entities
+using Library.Entities;
+
+namespace Library.Entities
 {
     public interface IEntityBase
     {

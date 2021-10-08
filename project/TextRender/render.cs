@@ -5,7 +5,7 @@ namespace Text
 {
     public static class TextRender
     {
-        public static void Render(string text, bool sameLine = false, Color color = Color.Magenta, int delay = 0, int speed = 30)
+        public static void Render(string text, bool sameLine = false, Color color = Color.Magenta, int delay = 0, int speed = 0)
         {
             //If player changed settings change them here, because otherwise it will cause a compile time error
             color = color != Color.Magenta ? color : TextColor;

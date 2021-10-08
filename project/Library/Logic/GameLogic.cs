@@ -13,6 +13,15 @@ namespace Library
             TimeOfDeath = DateTime.Now;
         }
     }
+    public class EnemyDeathEventArgs : EventArgs
+    {
+        public DateTime TimeOfDeath { get; private set; }
+
+        public EnemyDeathEventArgs()
+        {
+            TimeOfDeath = DateTime.Now;
+        }
+    }
     internal class Methods
     {
         //Check if the player want to play another game

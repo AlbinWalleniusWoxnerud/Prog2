@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
+using Battles;
 using Library;
 using Library.Entities;
 using Library.Entities.Enemies;
-using Battles;
 using Text;
 namespace Program
 {
@@ -34,7 +34,7 @@ namespace Program
                         // while (run.playAgain)
                         {
                             run = new CurrentRun();
-                            Player player = new Player(attack: 30);
+                            Player player = new Player(attack: 30, shield: 200);
                             player.PlayerDeathEventHandler += Battles.Battle.player_PlayerDeathEventHandler;
 
                             Room[] rooms = new Room[9];
@@ -45,7 +45,7 @@ namespace Program
                             //Intro dialog
                             menu.Greetings();
 
-                            Goblin g = new Goblin(attack: 20);
+                            Goblin g = new Goblin(attack: 20, health: 300);
                             Battle.Combat(player, g);
 
                             //While the game isn't over
