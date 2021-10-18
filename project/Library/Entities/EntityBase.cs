@@ -20,6 +20,7 @@ namespace Library.Entities
             this._health -= (int)damage;
             if (this._health <= 0)
             {
+                this._alive = false;
                 EntityDeath();
             }
         }

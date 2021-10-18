@@ -9,11 +9,6 @@ namespace Library.Entities
             internal Goblin(int health = 25, int shield = 50, int attack = 10, double defense = 0.8, int crit = 20) : base(EntityType.Goblin, health, shield, attack, defense, crit)
             {
             }
-
-            private protected override void EntityDeath()
-            {
-                base.EntityDeath(this, new EnemyDeathEventArgs(this.entityType));
-            }
         }
         internal class HobGoblin : EnemyBase
         {

@@ -80,37 +80,26 @@ namespace Battles
 
         public static bool CheckIfWinner(Player player, EnemyBase enemy)
         {
-            if (enemy._health <= 0)
+            if (enemy._alive == false)
             {
                 TextRender.Render("");
                 TextRender.Render("You won the battle!", color: Text.Color.White);
                 TextRender.Render("");
                 return true;
             }
-            if (player._health <= 0)
+            else if (player._alive == false)
             {
+                if (enemy.entityType == EntityType.Dragonling)
+                {
+                    TextRender.Render("");
+                    TextRender.Render("You lost the battle!", color: Text.Color.DarkRed);
+                    TextRender.Render("");
+                    return true;
+                }
                 TextRender.Render("");
                 TextRender.Render("You lost the battle, and died!", color: Text.Color.DarkRed);
                 TextRender.Render("");
                 // player.alive = false;
-                return true;
-            }
-            return false;
-        }
-        public static bool CheckIfWinnerFinalFight(Player player, EnemyBase enemy)
-        {
-            if (enemy._health <= 0)
-            {
-                TextRender.Render("");
-                TextRender.Render("You won the battle!", color: Text.Color.White);
-                TextRender.Render("");
-                return true;
-            }
-            if (player._health <= 0)
-            {
-                TextRender.Render("");
-                TextRender.Render("You lost the battle!", color: Text.Color.DarkRed);
-                TextRender.Render("");
                 return true;
             }
             return false;

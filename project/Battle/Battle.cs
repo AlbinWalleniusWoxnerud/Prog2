@@ -10,15 +10,12 @@ namespace Battles
     {
         public static bool Combat(Player player, EnemyBase enemy)
         {
-
-            //First combat with a goblin
             TextRender.Render("");
             TextRender.Render("You prepare for combat");
             TextRender.Render("");
             TextRender.Render("Battle start", color: Text.Color.White);
 
-            //While alive continue combat until one dies
-            while (player._alive && enemy._alive)
+            while (true)
             {
                 //Init vars
                 bool isPlayerChooseDefend = false;
@@ -57,14 +54,11 @@ namespace Battles
                 TextRender.Render(" attacks you.");
 
                 //Call the playergetsattack method with the stats of the enemy, this also makes it easy to scale up
-                // PlayerGetsAttacked(player, enemy, isPlayerChooseDefend);
                 CalculateBattleResult(enemy, player, isPlayerChooseDefend);
 
                 //If there is a winner here the player lost therefore return false
                 if (CheckIfWinner(player, enemy)) return false;
             }
-            //This should not under any circumstances trigger
-            return true;
         }
     }
 }

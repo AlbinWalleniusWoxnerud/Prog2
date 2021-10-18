@@ -16,10 +16,9 @@ namespace Library.Entities
             this._alive = true;
         }
 
-        private protected void EntityDeath(object sender, EnemyDeathEventArgs e)
+        private protected override void EntityDeath()
         {
-            var senderReflection = sender.GetType().GetProperties();
-            OnEnemyDeath(e);
+            OnEnemyDeath(new EnemyDeathEventArgs(this.entityType));
         }
 
 
