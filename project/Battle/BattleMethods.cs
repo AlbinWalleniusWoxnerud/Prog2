@@ -7,9 +7,9 @@ using Text;
 
 namespace Battles
 {
-    static partial class Battle
+    partial class Battle
     {
-        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending) where T : EntityBase where U : EntityBase
+        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
         {
             double damage = attacker.attack * defender.defense;
             TextRender.Render("Damage dealt reduced by ", sameLine: true);
@@ -108,10 +108,12 @@ namespace Battles
         public static void player_PlayerDeathEventHandler(Object sender, PlayerDeathEventArgs e)
         {
             Console.WriteLine($"The player died at {e.TimeOfDeath}.");
+            isCombatansAlive = false;
         }
         public static void enemy_EnemyDeathEventHandler(Object sender, EnemyDeathEventArgs e)
         {
             Console.WriteLine($"The enemy died at {e.TimeOfDeath}.");
+            isCombatansAlive = false;
         }
     }
 }
