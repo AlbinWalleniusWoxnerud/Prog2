@@ -29,11 +29,11 @@ namespace Program
                 {
                     //Play game
                     case 1:
-                        CurrentRun run = new CurrentRun();
+                        CurrentRun run = new();
                         //While gamelogic
                         // while (run.playAgain)
                         {
-                            run = new CurrentRun();
+                            run = new();
                             Player player = new Player(attack: 30, shield: 200);
                             Goblin g = new Goblin(attack: 2000);
                             InitiateEvents(player, g);
@@ -55,7 +55,7 @@ namespace Program
                             while (player._alive == true)
                             {
                                 //Go to the room indicated by Gamelogic
-                                InitRoom(player, rooms, CurrentRun.currentRoom);
+                                InitRoom(player, rooms, CurrentRun);
                             }
 
                             //Play again yes/no
