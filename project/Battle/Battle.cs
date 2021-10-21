@@ -66,8 +66,8 @@ namespace Battles
                     CalculateBattleResult(enemy, player, isPlayerChooseDefend);
                 }
                 battleRound++;
-                if (CheckIfWinner(player, enemy)) return;
             }
+            CheckIfWinner(player, enemy);
         }
     }
 }

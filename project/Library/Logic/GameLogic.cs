@@ -58,40 +58,40 @@ namespace Library
             return false;
         }
 
-        // internal static void InitRoom(Player player, Room[] rooms, int currentRoom)
-        // {
-        //     //Really just a switch made into a method to make the code less cluttered
-        //     //Based on current room get that room
-        //     switch (currentRoom)
-        //     {
-        //         case 1:
-        //             Rooms.Room1.Room(player, rooms[0]);
-        //             break;
-        //         case 2:
-        //             Rooms.Room2.Room(player, rooms[1]);
-        //             break;
-        //             // case 3:
-        //             //     Room3Methods.Room3();
-        //             //     break;
-        //             // case 4:
-        //             //     Room4Methods.Room4();
-        //             //     break;
-        //             // case 5:
-        //             //     Room5Methods.Room5();
-        //             //     break;
-        //             // case 6:
-        //             //     Room6Methods.Room6();
-        //             //     break;
-        //             // case 7:
-        //             //     Room7Methods.Room7();
-        //             //     break;
-        //             // case 8:
-        //             //     Room8Methods.Room8();
-        //             //     break;
-        //             // case 9:
-        //             //     Room9Methods.Room9();
-        //             // break;
-        //     }
-        // }
+        internal static void InitRoom(Player player, Room[] rooms, int currentRoom)
+        {
+            //Really just a switch made into a method to make the code less cluttered
+            //Based on current room get that room
+            switch (currentRoom)
+            {
+                case 1:
+                    Rooms.Room_1.Room(player, rooms[0]);
+                    break;
+                case 2:
+                    Rooms.Room2.Room(player, rooms[1]);
+                    break;
+                    // case 3:
+                    //     Room3Methods.Room3();
+                    //     break;
+                    // case 4:
+                    //     Room4Methods.Room4();
+                    //     break;
+                    // case 5:
+                    //     Room5Methods.Room5();
+                    //     break;
+                    // case 6:
+                    //     Room6Methods.Room6();
+                    //     break;
+                    // case 7:
+                    //     Room7Methods.Room7();
+                    //     break;
+                    // case 8:
+                    //     Room8Methods.Room8();
+                    //     break;
+                    // case 9:
+                    //     Room9Methods.Room9();
+                    // break;
+            }
+        }
     }
 }

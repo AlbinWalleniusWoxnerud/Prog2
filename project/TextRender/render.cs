@@ -9,7 +9,6 @@ namespace Text
         {
             //If player changed settings change them here, because otherwise it will cause a compile time error
             color = color != Color.Magenta ? color : TextColor;
-            color = Color.Magenta;
             delay = delay == 0 ? delay : Delay;
             speed = speed == 30 ? speed : Speed;
 
@@ -103,7 +102,7 @@ namespace Text
         {
             get;
             set;
-        }
+        } = Color.Magenta;
     }
     public enum Color : byte
     {

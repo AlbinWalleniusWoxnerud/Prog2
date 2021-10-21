@@ -35,7 +35,7 @@ namespace Program
                         {
                             run = new CurrentRun();
                             Player player = new Player(attack: 30, shield: 200);
-                            Goblin g = new Goblin(attack: 20);
+                            Goblin g = new Goblin(attack: 2000);
                             InitiateEvents(player, g);
 
                             Room[] rooms = new Room[9];
@@ -46,13 +46,16 @@ namespace Program
                             //Intro dialog
                             menu.Greetings();
 
-                            Console.WriteLine(Battle.Combat(player, g));
-
+                            Battle battle = new(player, g);
+                            if (player._alive == false)
+                            {
+                                Console.WriteLine("Died!");
+                            }
                             //While the game isn't over
-                            // while (IsGameOver(player) == false)
+                            while (player._alive == true)
                             {
                                 //Go to the room indicated by Gamelogic
-                                // InitRoom(player, rooms, CurrentRun.currentRoom);
+                                InitRoom(player, rooms, CurrentRun.currentRoom);
                             }
 
                             //Play again yes/no

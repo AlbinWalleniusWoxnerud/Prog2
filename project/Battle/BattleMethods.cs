@@ -9,7 +9,7 @@ namespace Battles
 {
     partial class Battle
     {
-        public static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
+        private static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
         {
             double damage = attacker.attack * defender.defense;
             TextRender.Render("Damage dealt reduced by ", sameLine: true);
@@ -54,7 +54,7 @@ namespace Battles
                     TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
                     TextRender.Render($" was dealt directly to {defender.entityType} HP.");
 
-                    defender.TakeDamage(damage);
+                    if (isDefenderAliveAfterDamage(defender, damage) == false) return;
 
                     TextRender.Render($"{defender.entityType} has ", sameLine: true);
                     TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
@@ -68,7 +68,7 @@ namespace Battles
                 TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
                 TextRender.Render($" was dealt directly to {defender.entityType} HP.");
 
-                defender.TakeDamage(damage);
+                if (isDefenderAliveAfterDamage(defender, damage) == false) return;
 
                 TextRender.Render($"{defender.entityType} has ", sameLine: true);
                 TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
@@ -76,9 +76,16 @@ namespace Battles
             }
 
             TextRender.Render("");
+
+            static bool isDefenderAliveAfterDamage<O>(O defender, double damage) where O : EntityBase
+            {
+                defender.TakeDamage(damage);
+                if (defender._alive == false) return false;
+                return true;
+            }
         }
 
-        public static bool CheckIfWinner(Player player, EnemyBase enemy)
+        public static bool CheckIfWinner(EntityBase player, EntityBase enemy)
         {
             if (enemy._alive == false)
             {
@@ -87,7 +94,7 @@ namespace Battles
                 TextRender.Render("");
                 return true;
             }
-            else if (player._alive == false)
+            else /* (player._alive == false) */
             {
                 if (enemy.entityType == EntityType.Dragonling)
                 {
@@ -102,17 +109,16 @@ namespace Battles
                 // player.alive = false;
                 return true;
             }
-            return false;
         }
 
         public static void player_PlayerDeathEventHandler(Object sender, PlayerDeathEventArgs e)
         {
-            Console.WriteLine($"The player died at {e.TimeOfDeath}.");
+            TextRender.Render($"The player died at {e.TimeOfDeath}.", color: Text.Color.DarkRed);
             isCombatansAlive = false;
         }
         public static void enemy_EnemyDeathEventHandler(Object sender, EnemyDeathEventArgs e)
         {
-            Console.WriteLine($"The enemy died at {e.TimeOfDeath}.");
+            TextRender.Render($"The {e.DeadEnemyType} died at {e.TimeOfDeath}.", color: Text.Color.DarkRed);
             isCombatansAlive = false;
         }
     }
