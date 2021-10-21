@@ -12,6 +12,6 @@ namespace Library.Entities
         bool _alive { get; }
         EntityType entityType { get; }
 
-        void TakeDamage(double damage);
+        void TakeDamage(double damage, bool die);
     }
 }

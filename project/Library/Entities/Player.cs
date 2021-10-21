@@ -49,7 +49,7 @@ namespace Library.Entities
         // }
 
         //Everytime the player does something stupid increase stupidity and display that their stupidity increased, if stupidity reaches 10 the player dies, currently only works for room 1
-        public void Stupidity()
+        public bool isPlayerDeadStupidity()
         {
             if (this.stupidity > 9)
             {
@@ -60,8 +60,8 @@ namespace Library.Entities
                 TextRender.Render("");
 
                 //Change player status
-                this._alive = false;
-                return;
+                this.TakeDamage(die: true);
+                return true;
             }
             TextRender.Render("");
             TextRender.Render("Your stupidity increases...", color: Text.Color.DarkGreen);
@@ -69,6 +69,7 @@ namespace Library.Entities
 
             //Increase stupidity
             this.stupidity++;
+            return false;
         }
     }
 }

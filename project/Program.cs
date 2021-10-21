@@ -29,14 +29,14 @@ namespace Program
                 {
                     //Play game
                     case 1:
-                        CurrentRun run = new();
+
+                        CurrentRun currentRun = new();
+                        Player player = new Player();
+
                         //While gamelogic
-                        // while (run.playAgain)
+                        do
                         {
-                            run = new();
-                            Player player = new Player(attack: 30, shield: 200);
-                            Goblin g = new Goblin(attack: 2000);
-                            InitiateEvents(player, g);
+                            // InitiateEvents(player, g);
 
                             Room[] rooms = new Room[9];
                             for (int i = 0; i < 9; i++)
@@ -46,21 +46,17 @@ namespace Program
                             //Intro dialog
                             menu.Greetings();
 
-                            Battle battle = new(player, g);
-                            if (player._alive == false)
-                            {
-                                Console.WriteLine("Died!");
-                            }
                             //While the game isn't over
                             while (player._alive == true)
                             {
                                 //Go to the room indicated by Gamelogic
-                                InitRoom(player, rooms, CurrentRun);
+                                InitRoom(player, rooms, currentRun);
                             }
 
                             //Play again yes/no
                             // IsPlayAgain();
                         }
+                        while (currentRun.playAgain);
 
                         break;
                     case 2:

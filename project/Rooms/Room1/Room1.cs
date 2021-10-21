@@ -7,8 +7,19 @@ namespace Rooms
 {
     partial class Room_1
     {
+        public Room_1(Player player, Room room, CurrentRun currentRun)
+        {
+            this.player = player;
+            this.room = room;
+            this.currentRun = currentRun;
+            this.Room();
+        }
+
+        private Player player;
+        private Room room;
+        private CurrentRun currentRun;
         //Room 1 with all of its interactions
-        internal static void Room(Player player, Room room)
+        private void Room()
         {
             //If the player didnt clear the whole room and left, display this message when they returned
             if (!room.clear2 && room.specialInteraction) TextRender.Render("You return to the dark starting room.");
@@ -23,7 +34,7 @@ namespace Rooms
 
                 if (playerChoice1 == 2)
                 {
-                    CurrentRun.currentRoom = 2;
+                    currentRun.currentRoom = 2;
                     room.specialInteraction = true;
                     return;
                 }
@@ -66,7 +77,7 @@ namespace Rooms
                 if (playerChoice3 == 2)
                 {
                     //Change the current room to the one that the player is going to so that the initroom() method goes to that room
-                    CurrentRun.currentRoom = 2;
+                    currentRun.currentRoom = 2;
                     room.specialInteraction = true;
                     return;
                 }
@@ -90,7 +101,7 @@ namespace Rooms
                     {
                         //If the player opted to skip dialog skip it
                         Dialog5();
-                        CurrentRun.conquered = true;
+                        currentRun.conquered = true;
                         return;
                     }
 
@@ -104,14 +115,14 @@ namespace Rooms
                         //The  player did not use the key but this is done in order to stop the while loop
                         didNotUseKey = false;
                         room.specialInteraction = true;
-                        CurrentRun.currentRoom = 2;
+                        currentRun.currentRoom = 2;
                         return;
                     }
 
                     TextRender.Render("You search the room for other potential uses and find none.");
 
                     //If the player has looped around more than once increase stupidity, if stupidity is equal to 10 player dies, therefore return
-                    if (nrLoopDidNotUseKey > 0) if (Stupidity(player)) return;
+                    if (nrLoopDidNotUseKey > 0) if (player.isPlayerDeadStupidity()) return;
 
                     //Increase the counter for the amount of loops in the didNotUseKey while loop
                     nrLoopDidNotUseKey++;
@@ -139,7 +150,7 @@ namespace Rooms
                         int playerChoice8 = TextRender.Table(header: "Return to the rest of the maze to despair:", alternatives: "Yes".Split("."));
 
                         didNotUseKey = false;
-                        CurrentRun.currentRoom = 2;
+                        currentRun.currentRoom = 2;
                         room.specialInteraction = true;
                         return;
                     }
@@ -153,7 +164,7 @@ namespace Rooms
                     {
                         //The  player did not use the key but this is done in order to stop the while loop
                         didNotUseKey = false;
-                        CurrentRun.currentRoom = 2;
+                        currentRun.currentRoom = 2;
                         room.specialInteraction = true;
                         return;
                     }
@@ -161,7 +172,7 @@ namespace Rooms
                     TextRender.Render("You search the room for other potential uses and find none.");
 
                     //If the player has looped around more than once increase stupidity, if stupidity is equal to 10 player dies, therefore return
-                    if (nrLoopDidNotUseKey > 0) if (Stupidity(player)) return;
+                    if (nrLoopDidNotUseKey > 0) if (player.isPlayerDeadStupidity()) return;
 
                     //Increase the counter for the amount of loops in the didNotUseKey while loop
                     nrLoopDidNotUseKey++;
@@ -183,12 +194,12 @@ namespace Rooms
                 if (playerChoice4 == 2)
                 {
                     notLeaving = false;
-                    CurrentRun.currentRoom = 2;
+                    currentRun.currentRoom = 2;
                     return;
                 }
 
                 TextRender.Render("You examine the room again and find nothing new.");
-                if (nrLoopDidNotLeave > 0) if (Stupidity(player)) return;
+                if (nrLoopDidNotLeave > 0) if (player.isPlayerDeadStupidity()) return;
                 nrLoopDidNotLeave++;
             }
         }

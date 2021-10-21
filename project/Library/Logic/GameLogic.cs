@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Library.Entities;
+using Rooms;
 
 namespace Library
 {
@@ -58,17 +59,17 @@ namespace Library
             return false;
         }
 
-        internal static void InitRoom(Player player, Room[] rooms, int currentRoom)
+        internal static void InitRoom(Player player, Room[] rooms, CurrentRun currentRun)
         {
             //Really just a switch made into a method to make the code less cluttered
             //Based on current room get that room
-            switch (currentRoom)
+            switch (currentRun.currentRoom)
             {
                 case 1:
-                    Rooms.Room_1.Room(player, rooms[0]);
+                    Room_1 room1 = new(player, rooms[0], currentRun);
                     break;
                 case 2:
-                    Rooms.Room2.Room(player, rooms[1]);
+                    Room_2 room2 = new(player, rooms[1], currentRun);
                     break;
                     // case 3:
                     //     Room3Methods.Room3();

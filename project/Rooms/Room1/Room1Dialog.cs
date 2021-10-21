@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using ProgramLibrary;
+using Library;
 using Text;
 
 namespace Rooms
@@ -8,14 +8,14 @@ namespace Rooms
     partial class Room_1
     {
         //Simply dialog
-        public static void Dialog1()
+        private void Dialog1()
         {
             TextRender.Render("You can see something in the ", sameLine: true);
             TextRender.Render("corner", sameLine: true, color: Text.Color.White);
             TextRender.Render(" of the room as well as what looks like a ", sameLine: true);
             TextRender.Render("path.", color: Text.Color.White);
         }
-        public static void Dialog2()
+        private void Dialog2()
         {
             TextRender.Render("As you examine the ", sameLine: true);
             TextRender.Render("corner", sameLine: true, color: Text.Color.White);
@@ -29,7 +29,7 @@ namespace Rooms
             TextRender.Render("");
             TextRender.Render("You equip the armour when you realise that you can't carry everything.");
         }
-        public static void Dialog3()
+        private void Dialog3()
         {
             TextRender.Render("You examine the rest of the room and find a hidden ", sameLine: true);
             TextRender.Render("door", sameLine: true, color: Text.Color.White);
@@ -39,7 +39,7 @@ namespace Rooms
             TextRender.Render("key", sameLine: true, color: Text.Color.White);
             TextRender.Render(" might help.");
         }
-        public static void Dialog4()
+        private void Dialog4()
         {
             TextRender.Render("You return to the dark starting room with the ", sameLine: true);
             TextRender.Render("key", sameLine: true, color: Text.Color.White);
@@ -47,7 +47,7 @@ namespace Rooms
             TextRender.Render("Smedd", sameLine: true, color: Text.Color.Green);
             TextRender.Render(".");
         }
-        public static void Dialog5()
+        private void Dialog5()
         {
             TextRender.Render("You use the ", sameLine: true);
             TextRender.Render("key", sameLine: true, color: Text.Color.White);
@@ -78,14 +78,14 @@ namespace Rooms
             TextRender.Render("");
         }
 
-        public static void Dialog6()
+        private void Dialog6()
         {
             TextRender.Render("");
             TextRender.Render("You return to the dark starting room but now armed with the ", sameLine: true);
             TextRender.Render("key", sameLine: true, color: Text.Color.White);
             TextRender.Render(" of the shrine.");
         }
-        public static void Dialog7()
+        private void Dialog7()
         {
             TextRender.Render("You use the ", sameLine: true);
             TextRender.Render("key", sameLine: true, color: Text.Color.White);

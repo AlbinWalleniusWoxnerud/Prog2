@@ -15,10 +15,10 @@ namespace Library.Entities
         // {
         //     return isVictory();
         // }
-        public void TakeDamage(double damage)
+        public void TakeDamage(double damage = 0, bool die = false)
         {
             this._health -= (int)damage;
-            if (this._health <= 0)
+            if (this._health <= 0 || die == true)
             {
                 this._alive = false;
                 EntityDeath();
