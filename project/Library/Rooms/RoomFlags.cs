@@ -31,21 +31,5 @@ namespace Library
         internal RoomFlags()
         {
         }
-
-        public RoomFlags(Player player, RoomFlags room, CurrentRun currentRun)
-        {
-            this.player = player;
-            this.room = room;
-            this.currentRun = currentRun;
-            this.RoomInteraction();
-        }
-        private protected virtual void RoomInteraction()
-        {
-
-        }
-
-        private Player player;
-        private RoomFlags room;
-        private CurrentRun currentRun;
     }
 }

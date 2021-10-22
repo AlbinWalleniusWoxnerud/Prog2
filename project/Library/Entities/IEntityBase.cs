@@ -4,7 +4,7 @@ namespace Library.Entities
 {
     public interface IEntityBase
     {
-        int _health { get; }
+        int health { get; }
         int shield { get; }
         double attack { get; }
         double defense { get; }

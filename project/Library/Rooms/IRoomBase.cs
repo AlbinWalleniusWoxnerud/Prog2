@@ -9,9 +9,6 @@ namespace Library
         void RoomBase(Player player, RoomFlags room, CurrentRun currentRun)
         {
         }
-        void RoomInteraction()
-        {
-        }
 
         Player player { get; set; }
         RoomFlags room { get; set; }

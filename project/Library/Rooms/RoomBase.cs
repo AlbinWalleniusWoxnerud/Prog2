@@ -4,7 +4,7 @@ using Library.Entities;
 namespace Library
 {
     //Room logic, or rather room eventflags 
-    internal abstract class RoomBase
+    internal abstract class RoomBase : IRoomBase
     {
         public RoomBase(Player player, RoomFlags room, CurrentRun currentRun)
         {
@@ -13,13 +13,10 @@ namespace Library
             this.currentRun = currentRun;
             this.RoomInteraction();
         }
-        private protected virtual void RoomInteraction()
-        {
+        private protected abstract void RoomInteraction();
 
-        }
-
-        private Player player;
-        private RoomFlags room;
-        private CurrentRun currentRun;
+        public Player player { get; set; }
+        public RoomFlags room { get; set; }
+        public CurrentRun currentRun { get; set; }
     }
 }

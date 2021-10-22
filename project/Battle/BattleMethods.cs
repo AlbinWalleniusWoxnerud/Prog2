@@ -57,7 +57,7 @@ namespace Battles
                     if (isDefenderAliveAfterDamage(defender, damage) == false) return;
 
                     TextRender.Render($"{defender.entityType} has ", sameLine: true);
-                    TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
+                    TextRender.Render($"{defender.health}", sameLine: true, color: Text.Color.White);
                     TextRender.Render(" HP remaining.");
                 }
             }
@@ -71,7 +71,7 @@ namespace Battles
                 if (isDefenderAliveAfterDamage(defender, damage) == false) return;
 
                 TextRender.Render($"{defender.entityType} has ", sameLine: true);
-                TextRender.Render($"{defender._health}", sameLine: true, color: Text.Color.White);
+                TextRender.Render($"{defender.health}", sameLine: true, color: Text.Color.White);
                 TextRender.Render(" HP remaining.");
             }
 

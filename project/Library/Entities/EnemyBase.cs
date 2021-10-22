@@ -8,7 +8,7 @@ namespace Library.Entities
         internal EnemyBase(EntityType monstertype, int health, int shield, int attack, double defense, int crit)
         {
             this.entityType = monstertype;
-            this._health = health;
+            this.health = health;
             this.shield = shield;
             this.attack = attack;
             this.defense = defense;

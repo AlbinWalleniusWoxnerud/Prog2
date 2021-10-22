@@ -19,7 +19,7 @@ namespace Library.Entities
         //Player initialization with default values
         internal Player(int health = 100, int maxhealth = 100, int shield = 0, int attack = 1, double defense = 1, int crit = 10)
         {
-            this._health = health;
+            this.health = health;
             this.maxhealth = maxhealth;
             this.shield = shield;
             this.attack = attack;
@@ -40,6 +40,14 @@ namespace Library.Entities
             if (handler != null)
             {
                 handler(this, e);
+            }
+        }
+
+        public void FullHeal()
+        {
+            if (this.hasTrueKey == true)
+            {
+                this._health = maxhealth;
             }
         }
 

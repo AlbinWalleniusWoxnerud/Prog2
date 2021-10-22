@@ -5,7 +5,7 @@ using Text;
 
 namespace Rooms
 {
-    partial class Room_1
+    partial class Room_1 : RoomBase
     {
         //Simply dialog
         private void Dialog1()

@@ -31,17 +31,17 @@ namespace Library
         // internal static void IsPlayAgain()
         // {
         //     SlowRPGWrite("Would you like to play again?");
-        //     int input = TextRender.Table("Menu:", "Play again.. End game.".Split(". "));
+        //     int input = TextRender.Table("TextRender.Table:", "Play again.. End game.".Split(". "));
         //     switch (input)
         //     {
         //         case 1:
-        //             StaticPlayer.Reset();
+        //             Reset();
         //             StaticEnemies.Reset();
-        //             GameLogic.Reset();
+        //             currentRun.Reset();
         //             StaticRoom.Reset();
         //             break;
         //         case 2:
-        //             GameLogic.playAgain = false;
+        //             currentRun.playAgain = false;
         //             break;
         //     }
 
@@ -51,7 +51,7 @@ namespace Library
         internal static bool IsGameOver(Player player, CurrentRun run)
         {
             //The game is over if the player is dead or if the maze is conquered
-            if (player._alive == false || player._health <= 0)
+            if (player._alive == false || player.health <= 0)
             {
                 return true;
             }

@@ -5,21 +5,13 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_1
+    partial class Room_1 : RoomBase
     {
-        public Room_1(Player player, RoomFlags room, CurrentRun currentRun)
+        public Room_1(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
-            this.player = player;
-            this.room = room;
-            this.currentRun = currentRun;
-            this.Room();
         }
-
-        private Player player;
-        private RoomFlags room;
-        private CurrentRun currentRun;
         //Room 1 with all of its interactions
-        private void Room()
+        private protected override void RoomInteraction()
         {
             //If the player didnt clear the whole room and left, display this message when they returned
             if (!room.clear2 && room.specialInteraction) TextRender.Render("You return to the dark starting room.");
@@ -29,7 +21,7 @@ namespace Rooms
             {
                 Dialog1();
 
-                //Menu
+                //TextRender.Table
                 int playerChoice1 = TextRender.Table(header: "What do you do?", alternatives: "Examine the corner of the room.. Explore the path.".Split(". "));
 
                 if (playerChoice1 == 2)

@@ -11,18 +11,18 @@ namespace Program
     {
         static void Main()
         {
-            Menu menu = new Menu();
+            TextRender.Table TextRender.Table = new TextRender.Table();
 
             //UTF-8
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             //Introduction
-            menu.Introduction();
+            TextRender.Table.Introduction();
 
             while (true)
             {
-                //Create a menu with the specified header and alternatives
-                int input = TextRender.Table(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
+                //Create a TextRender.Table with the specified header and alternatives
+                int input = TextRender.Table(header: "Main TextRender.Table:", alternatives: "Play game. Settings. End program".Split(". "));
 
                 // Depending on input give different results
                 switch (input)
@@ -44,7 +44,7 @@ namespace Program
                                 rooms[i] = new RoomFlags();
                             }
                             //Intro dialog
-                            menu.Greetings();
+                            TextRender.Table.Greetings();
 
                             //While the game isn't over
                             while (player._alive == true)
@@ -61,7 +61,7 @@ namespace Program
                         break;
                     case 2:
                         //Change settings of game
-                        menu.Settings();
+                        TextRender.Table.Settings();
                         break;
                     case 3:
                         //End program
