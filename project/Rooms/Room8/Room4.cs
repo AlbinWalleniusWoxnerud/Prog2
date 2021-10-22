@@ -7,197 +7,102 @@ namespace Rooms
 {
     partial class Room_3
     {
-        public static void Room4()
+        public static void Room8()
         {
-            if (StaticRoom.room4.specialInteraction)
-            {
-                SlowRPG_Write("");
-                SlowRPG_Write("You return to the room marked: ", sameLine: true);
-                SlowRPG_Write("Room 4", color: "White");
-                SlowRPG_Write("");
-            }
-
-            if (!StaticRoom.room4.clear1)
+            if (!StaticRoom.room8.clear1)
             {
                 //Usual dialog with skip
-                Room4_Dialog1();
-                StaticRoom.room4.clear1 = true;
+                Room8_Dialog1();
+
+                int room8_playerChoice1 = Menu(header: "Do you: ", alternatives: "Praise it.. Don' praise it.".Split(". "));
+
+                //If player choose so return to room 7
+                if (room8_playerChoice1 == 2)
+                {
+                    SlowRPG_Write("");
+                    SlowRPG_Write("You choose not to praise it.");
+                    StaticRoom.room8.clear1 = true;
+                }
+
+                if (!StaticRoom.room8.clear1)
+                {
+                    //If missing HP is greater than 10 or equal to 10 simply add 10 onto current HP
+                    if ((StaticPlayer.player.maxhealth - StaticPlayer.player.health) >= 10)
+                    {
+                        StaticPlayer.player.health = StaticPlayer.player.health + 10;
+                    }
+
+                    //If missing HP is less than 10 the player will heal all the missing health but nothing more, the 'else if' can be changed to simply else but the readability would be harmed
+                    else if ((StaticPlayer.player.maxhealth - StaticPlayer.player.health) < 10)
+                    {
+                        StaticPlayer.player.health = StaticPlayer.player.health + (StaticPlayer.player.maxhealth - StaticPlayer.player.health);
+                    }
+
+                    //Un-skippable dialog due to change in player status
+                    Room8_Dialog2();
+
+                    //Player gets +10 attack
+                    StaticPlayer.player.attack += 10;
+
+                    //Un-skippable dialog due to change in player status, dialog happens after the increase in attack so it displays the right values 
+                    Room8_Dialog3();
+
+                    StaticPlayer.player.subjectOfLordBacon = true;
+                    Room8_Dialog4();
+
+                    StaticRoom.room8.clear1 = true;
+                }
             }
 
-            if (!StaticRoom.room4.clear2)
+            if (StaticRoom.room8.clear1 && !StaticRoom.room8.clear2)
             {
-                if (!StaticPlayer.player.hasChestKey)
-                {
-                    SlowRPG_Write("");
-                    int room4_playerChoice1 = Menu(header: "Do you: ", alternatives: "Go to the new path.. Return to room 3, the second goblin room.".Split(". "));
+                int room8_playerChoice2 = Menu(header: "Do you: ", alternatives: "Examine the rest of the shrine.. Return to room 7, Hobgoblin room.".Split(". "));
 
-                    switch (room4_playerChoice1)
-                    {
-                        case 1:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
-                            GameLogic.currentRoom = 5;
-                            return;
-                        case 2:
-                            SlowRPG_Write("You choose to return to room 3, the second goblin room..");
-                            GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
-                            return;
-                    }
-                }
-
-                if (StaticPlayer.player.hasChestKey && StaticPlayer.player.brokenChestKey && !StaticPlayer.player.hasBossKey)
-                {
-                    SlowRPG_Write("");
-                    int room4_playerChoice2 = Menu(header: "Do you: ", alternatives: "Go to the new path.. Try to use the broken key to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
-
-                    switch (room4_playerChoice2)
-                    {
-                        case 1:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
-                            GameLogic.currentRoom = 5;
-                            return;
-                        case 2:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to try and use the broken key to open the ", sameLine: true);
-                            SlowRPG_Write($"Chest", sameLine: true, color: "White");
-                            SlowRPG_Write(".");
-                            SlowRPG_Write("Against all odds the broken key actually managed to open the chest ever so slightly.");
-                            SlowRPG_Write("Just as it is about to open the key completely brakes and the lid of the chest threats to slam shut for eternity.");
-                            SlowRPG_Write("You slam your hand under the lid just in time to keep it open.");
-                            SlowRPG_Write("Unfortunately at the cost of your hand.");
-                            SlowRPG_Write("-20 HP", color: "White");
-                            StaticPlayer.player.health -= 20;
-                            if (IsGameOver()) return;
-                            SlowRPG_Write("You have ", sameLine: true);
-                            SlowRPG_Write($"{StaticPlayer.player.health}", sameLine: true, color: "White");
-                            SlowRPG_Write(" HP remaining.");
-                            break;
-                        case 3:
-                            SlowRPG_Write("You choose to return to room 3, the second goblin room.");
-                            GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
-                            return;
-                    }
-                }
-
-                if (StaticPlayer.player.hasChestKey && !StaticPlayer.player.brokenChestKey && !StaticPlayer.player.hasBossKey)
-                {
-                    SlowRPG_Write("");
-                    int room4_playerChoice3 = Menu(header: "Do you: ", alternatives: "Go to the new path.. Try to use the key from the shrine to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
-
-                    switch (room4_playerChoice3)
-                    {
-                        case 1:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
-                            GameLogic.currentRoom = 5;
-                            return;
-                        case 2:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to try and use the key from the shrine to open the ", sameLine: true);
-                            SlowRPG_Write($"big Chest", sameLine: true, color: "White");
-                            SlowRPG_Write(".");
-                            SlowRPG_Write("The key instantly opens the chest.");
-                            break;
-                        case 3:
-                            SlowRPG_Write("You choose to return to room 3, the second goblin room.");
-                            GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
-                            return;
-                    }
-                }
-
-                //Un-skippable due to major event
-                Room4_Dialog2();
-
-                StaticPlayer.player.hasBossKey = true;
-
-                int room4_playerChoice4 = Menu(header: "Do you: ", alternatives: "Drink the unknown potion.. Don't drink the potentially poisonous potion and try to use the boss key..".Split(". "));
-
-                switch (room4_playerChoice4)
+                switch (room8_playerChoice2)
                 {
                     case 1:
                         SlowRPG_Write("");
-                        SlowRPG_Write("You choose to drink the unknown potion.");
-                        SlowRPG_Write("It weakens your strength.");
-                        SlowRPG_Write("-20% attack", color: "White");
+                        SlowRPG_Write("You choose to examine the rest of the shrine and find a ", sameLine: true);
+                        SlowRPG_Write("key", sameLine: true, color: "White");
+                        SlowRPG_Write(".");
+                        SlowRPG_Write("Engraved on the key is the marking of a chest...");
 
-                        //Temporary var for player attack
-                        double tempAttack;
+                        //Player found the chest key
+                        StaticPlayer.player.hasChestKey = true;
 
-                        //Cast int player.attack to double
-                        tempAttack = (double)StaticPlayer.player.attack * 0.8;
-
-                        //Down cast double tempAttack to int
-                        StaticPlayer.player.attack = (int)tempAttack;
-
-                        SlowRPG_Write("Still have to try to use the boss key.");
+                        SlowRPG_Write("This could be useful.");
+                        SlowRPG_Write("You find nothing else.");
+                        StaticRoom.room8.clear2 = true;
                         break;
                     case 2:
                         SlowRPG_Write("");
-                        SlowRPG_Write("You choose not to drink the unknown potion and to try to use the boss key.");
-                        break;
+                        SlowRPG_Write("You choose to return to room 7, Hobgoblin room.");
+                        GameLogic.currentRoom = 7;
+                        StaticRoom.room8.specialInteraction = true;
+                        return;
                 }
-                StaticRoom.room4.clear2 = true;
             }
 
-            if (!StaticRoom.room4.clear3)
+            if (StaticRoom.room8.specialInteraction)
             {
-                if (StaticPlayer.player.hasBossKey)
-                {
-                    int room4_playerChoice5 = Menu(header: "Do you: ", alternatives: "Use the BOSS key on the door with the letters 'BOSS'.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
-
-                    switch (room4_playerChoice5)
-                    {
-                        case 1:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to use the BOSS key on the door with the letters 'BOSS'.");
-                            SlowRPG_Write("The door unlocks with a click.");
-                            break;
-                        case 2:
-                            SlowRPG_Write("");
-                            SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
-                            GameLogic.currentRoom = 5;
-                            return;
-                        case 3:
-                            SlowRPG_Write("You choose to return to room 3, the second goblin room..");
-                            GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
-                            return;
-                    }
-                }
-                StaticRoom.room4.clear3 = true;
+                SlowRPG_Write("");
+                SlowRPG_Write("You return to the ", sameLine: true);
+                SlowRPG_Write("shrine", sameLine: true, color: "White");
+                SlowRPG_Write(".");
             }
 
-
-            int room4_playerChoice6 = Menu(header: "What do you do: ", alternatives: "Enter the boss room.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
-
-            switch (room4_playerChoice6)
+            if (StaticRoom.room8.clear2)
             {
-                case 1:
-                    SlowRPG_Write("");
-                    SlowRPG_Write("You choose to enter the boss room.");
-                    StaticRoom.room4.specialInteraction = true;
-                    GameLogic.currentRoom = 9;
-                    return;
-                case 2:
-                    SlowRPG_Write("");
-                    SlowRPG_Write("You choose to go to the new path.");
-                    StaticRoom.room4.specialInteraction = true;
-                    GameLogic.currentRoom = 5;
-                    return;
-                case 3:
-                    SlowRPG_Write("You choose to return to room 3, the second goblin room..");
-                    GameLogic.currentRoom = 3;
-                    StaticRoom.room4.specialInteraction = true;
-                    return;
-            }
+                SlowRPG_Write("");
+                SlowRPG_Write("There is nothing else in the shrine.");
 
+                //No need to do anything special with the choice since there is only one alternative
+                int room8_playerChoice3 = Menu(header: "Return to room 7, Hobgoblin room: ", alternatives: "Yes".Split(". "));
+
+                GameLogic.currentRoom = 7;
+                StaticRoom.room8.specialInteraction = true;
+                return;
+            }
         }
     }
+}
