@@ -112,7 +112,14 @@ namespace Library.Battle
 
         public static void player_PlayerDeathEventHandler(Object sender, PlayerDeathEventArgs e)
         {
-            TextRender.Render($"The player died at {e.TimeOfDeath}.", color: Text.Color.DarkRed);
+            if ((Boolean)sender.GetType().GetProperty("hasTrueKey").GetValue(sender))
+            {
+                Console.WriteLine("hahahah");
+            }
+            else
+            {
+                TextRender.Render($"The player died at {e.TimeOfDeath}.", color: Text.Color.DarkRed);
+            }
             isCombatansAlive = false;
         }
         public static void enemy_EnemyDeathEventHandler(Object sender, EnemyDeathEventArgs e)

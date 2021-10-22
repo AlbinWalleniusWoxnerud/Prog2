@@ -22,7 +22,7 @@ namespace Program
             while (true)
             {
                 //Create a TextRender.Table with the specified header and alternatives
-                int input = TextRender.Table(header: "Main TextRender.Table:", alternatives: "Play game. Settings. End program".Split(". "));
+                int input = TextRender.Table(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
 
                 // Depending on input give different results
                 switch (input)
@@ -32,6 +32,8 @@ namespace Program
 
                         CurrentRun currentRun = new();
                         Player player = new Player();
+                        InitiateEvents(player);
+                        player.TakeDamage(die: true);
 
                         //While gamelogic
                         do
@@ -70,10 +72,9 @@ namespace Program
                 }
             }
 
-            static void InitiateEvents(Player player, Goblin g)
+            static void InitiateEvents(Player player)
             {
                 player.PlayerDeathEventHandler += Fight.player_PlayerDeathEventHandler;
-                g.EnemyDeathEventHandler += Fight.enemy_EnemyDeathEventHandler;
             }
         }
     }
