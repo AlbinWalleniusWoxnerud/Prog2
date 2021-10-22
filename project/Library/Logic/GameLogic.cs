@@ -59,7 +59,7 @@ namespace Library
             return false;
         }
 
-        internal static void InitRoom(Player player, Room[] rooms, CurrentRun currentRun)
+        internal static void InitRoom(Player player, RoomFlags[] rooms, CurrentRun currentRun)
         {
             //Really just a switch made into a method to make the code less cluttered
             //Based on current room get that room

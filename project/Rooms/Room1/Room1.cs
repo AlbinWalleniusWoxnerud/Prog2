@@ -7,7 +7,7 @@ namespace Rooms
 {
     partial class Room_1
     {
-        public Room_1(Player player, Room room, CurrentRun currentRun)
+        public Room_1(Player player, RoomFlags room, CurrentRun currentRun)
         {
             this.player = player;
             this.room = room;
@@ -16,7 +16,7 @@ namespace Rooms
         }
 
         private Player player;
-        private Room room;
+        private RoomFlags room;
         private CurrentRun currentRun;
         //Room 1 with all of its interactions
         private void Room()

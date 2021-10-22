@@ -9,14 +9,14 @@ namespace Rooms
     {
         public static void Room6()
         {
-            if (!StaticRoom.room6.clear1)
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room6_Dialog1();
-                StaticRoom.room6.clear1 = true;
+                room.clear1 = true;
             }
 
-            if (!StaticRoom.room6.clear2)
+            if (!room.clear2)
             {
                 bool useBranchOfTheSinner = true;
                 while (useBranchOfTheSinner)
@@ -49,10 +49,10 @@ namespace Rooms
                     }
                     if (IsGameOver()) return;
                 }
-                StaticRoom.room6.clear2 = true;
+                room.clear2 = true;
             }
 
-            if (!StaticRoom.room6.clear3)
+            if (!room.clear3)
             {
                 //Un-skippable dialog due to change in status
                 Room6_Dialog2();
@@ -60,10 +60,10 @@ namespace Rooms
                 StaticPlayer.player.attack += 10;
 
                 SlowRPG_Write("You search through the rest of the room and find nothing of interest.");
-                StaticRoom.room6.clear3 = true;
+                room.clear3 = true;
             }
 
-            if (StaticRoom.room6.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the ", sameLine: true);
@@ -77,7 +77,7 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You return to room 5, the wolf room");
-                    StaticRoom.room6.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 5;
                     return;
             }

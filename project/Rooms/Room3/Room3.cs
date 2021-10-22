@@ -5,11 +5,14 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_3
+    partial class Room_3 : RoomBase
     {
-        public static void Room3()
+        public Room_3(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
-            if (!StaticRoom.room3.clear1)
+        }
+        private protected override void RoomInteraction()
+        {
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room3_Dialog1();
@@ -34,10 +37,10 @@ namespace Rooms
                 //Un-skippable dialog due to change in player status
                 Room3_Dialog2();
 
-                StaticRoom.room3.clear1 = true;
+                room.clear1 = true;
             }
 
-            if (StaticRoom.room3.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the room marked: ", sameLine: true);
@@ -51,13 +54,13 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose to go to the new path.");
-                    StaticRoom.room3.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 4;
                     return;
                 case 2:
                     SlowRPG_Write("You choose to return to room 2, the first goblin room..");
                     GameLogic.currentRoom = 2;
-                    StaticRoom.room3.specialInteraction = true;
+                    room.specialInteraction = true;
                     return;
             }
         }

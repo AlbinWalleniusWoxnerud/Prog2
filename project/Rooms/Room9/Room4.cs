@@ -9,7 +9,7 @@ namespace Rooms
     {
         public static void Room9()
         {
-            if (!StaticRoom.room9.clear1)
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room9_Dialog1();
@@ -49,11 +49,11 @@ namespace Rooms
                 }
                 StaticPlayer.player.health = StaticPlayer.player.maxhealth;
                 SlowRPG_Write("Now to figure out what to do with the key.");
-                StaticRoom.room9.clear1 = true;
+                room.clear1 = true;
             }
 
 
-            if (StaticRoom.room9.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the ", sameLine: true);
@@ -66,7 +66,7 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You return to room 4, the chest room.");
-                    StaticRoom.room7.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 4;
                     return;
             }

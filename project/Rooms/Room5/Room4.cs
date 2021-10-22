@@ -5,18 +5,25 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_3
+    partial class Room_5 : RoomFlags
     {
-        public static void Room5()
+        public Room_5(Player player, RoomFlags room, CurrentRun currentRun)
         {
-            if (!StaticRoom.room5.clear1)
+            this.player = player;
+            this.room = room;
+            this.currentRun = currentRun;
+            this.Room();
+        }
+        public void Room()
+        {
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room5_Dialog1();
-                StaticRoom.room5.clear1 = true;
+                room.clear1 = true;
             }
 
-            if (!StaticRoom.room5.clear2)
+            if (!room.clear2)
             {
                 if (StaticPlayer.player.hasMeat)
                 {
@@ -38,7 +45,7 @@ namespace Rooms
                         SlowRPG_Write("");
                         SlowRPG_Write("You choose to retreat to room 4, chest room.");
                         GameLogic.currentRoom = 4;
-                        StaticRoom.room5.specialInteraction = true;
+                        room.specialInteraction = true;
                         return;
                     }
 
@@ -61,10 +68,10 @@ namespace Rooms
                     SlowRPG_Write("");
                 }
                 SlowRPG_Write("Getting tired of all of these paths you still find a new path to take.");
-                StaticRoom.room5.clear2 = true;
+                room.clear2 = true;
             }
 
-            if (StaticRoom.room5.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the room marked: ", sameLine: true);
@@ -78,13 +85,13 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose to go to the new path.");
-                    StaticRoom.room5.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 6;
                     return;
                 case 2:
                     SlowRPG_Write("You choose to return to room 4, the chest room..");
                     GameLogic.currentRoom = 4;
-                    StaticRoom.room5.specialInteraction = true;
+                    room.specialInteraction = true;
                     return;
             }
         }

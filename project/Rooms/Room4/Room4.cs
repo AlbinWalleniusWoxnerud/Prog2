@@ -5,11 +5,14 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_3
+    partial class Room_4 : RoomFlags
     {
-        public static void Room4()
+        public Room_4(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
-            if (StaticRoom.room4.specialInteraction)
+        }
+        public void Room()
+        {
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the room marked: ", sameLine: true);
@@ -17,14 +20,14 @@ namespace Rooms
                 SlowRPG_Write("");
             }
 
-            if (!StaticRoom.room4.clear1)
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room4_Dialog1();
-                StaticRoom.room4.clear1 = true;
+                room.clear1 = true;
             }
 
-            if (!StaticRoom.room4.clear2)
+            if (!room.clear2)
             {
                 if (!StaticPlayer.player.hasChestKey)
                 {
@@ -36,13 +39,13 @@ namespace Rooms
                         case 1:
                             SlowRPG_Write("");
                             SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             GameLogic.currentRoom = 5;
                             return;
                         case 2:
                             SlowRPG_Write("You choose to return to room 3, the second goblin room..");
                             GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             return;
                     }
                 }
@@ -57,7 +60,7 @@ namespace Rooms
                         case 1:
                             SlowRPG_Write("");
                             SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             GameLogic.currentRoom = 5;
                             return;
                         case 2:
@@ -79,7 +82,7 @@ namespace Rooms
                         case 3:
                             SlowRPG_Write("You choose to return to room 3, the second goblin room.");
                             GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             return;
                     }
                 }
@@ -94,7 +97,7 @@ namespace Rooms
                         case 1:
                             SlowRPG_Write("");
                             SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             GameLogic.currentRoom = 5;
                             return;
                         case 2:
@@ -107,7 +110,7 @@ namespace Rooms
                         case 3:
                             SlowRPG_Write("You choose to return to room 3, the second goblin room.");
                             GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             return;
                     }
                 }
@@ -143,10 +146,10 @@ namespace Rooms
                         SlowRPG_Write("You choose not to drink the unknown potion and to try to use the boss key.");
                         break;
                 }
-                StaticRoom.room4.clear2 = true;
+                room.clear2 = true;
             }
 
-            if (!StaticRoom.room4.clear3)
+            if (!room.clear3)
             {
                 if (StaticPlayer.player.hasBossKey)
                 {
@@ -162,17 +165,17 @@ namespace Rooms
                         case 2:
                             SlowRPG_Write("");
                             SlowRPG_Write("You choose to go to the new path.");
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             GameLogic.currentRoom = 5;
                             return;
                         case 3:
                             SlowRPG_Write("You choose to return to room 3, the second goblin room..");
                             GameLogic.currentRoom = 3;
-                            StaticRoom.room4.specialInteraction = true;
+                            room.specialInteraction = true;
                             return;
                     }
                 }
-                StaticRoom.room4.clear3 = true;
+                room.clear3 = true;
             }
 
 
@@ -183,19 +186,19 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose to enter the boss room.");
-                    StaticRoom.room4.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 9;
                     return;
                 case 2:
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose to go to the new path.");
-                    StaticRoom.room4.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 5;
                     return;
                 case 3:
                     SlowRPG_Write("You choose to return to room 3, the second goblin room..");
                     GameLogic.currentRoom = 3;
-                    StaticRoom.room4.specialInteraction = true;
+                    room.specialInteraction = true;
                     return;
             }
 

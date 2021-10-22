@@ -38,10 +38,10 @@ namespace Program
                         {
                             // InitiateEvents(player, g);
 
-                            Room[] rooms = new Room[9];
+                            RoomFlags[] rooms = new RoomFlags[9];
                             for (int i = 0; i < 9; i++)
                             {
-                                rooms[i] = new Room();
+                                rooms[i] = new RoomFlags();
                             }
                             //Intro dialog
                             menu.Greetings();

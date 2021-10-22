@@ -9,7 +9,7 @@ namespace Rooms
     {
         public static void Room7()
         {
-            if (!StaticRoom.room7.clear1)
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room7_Dialog1();
@@ -63,11 +63,11 @@ namespace Rooms
 
                 Room7_Dialog3();
 
-                StaticRoom.room7.clear1 = true;
+                room.clear1 = true;
             }
 
 
-            if (StaticRoom.room7.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the room marked: ", sameLine: true);
@@ -80,13 +80,13 @@ namespace Rooms
                 case 1:
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose to go to the even deeper path.");
-                    StaticRoom.room7.specialInteraction = true;
+                    room.specialInteraction = true;
                     GameLogic.currentRoom = 8;
                     return;
                 case 2:
                     SlowRPG_Write("You choose to return to room 2.");
                     GameLogic.currentRoom = 2;
-                    StaticRoom.room7.specialInteraction = true;
+                    room.specialInteraction = true;
                     return;
             }
         }

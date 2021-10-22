@@ -9,7 +9,7 @@ namespace Rooms
     {
         public static void Room8()
         {
-            if (!StaticRoom.room8.clear1)
+            if (!room.clear1)
             {
                 //Usual dialog with skip
                 Room8_Dialog1();
@@ -21,10 +21,10 @@ namespace Rooms
                 {
                     SlowRPG_Write("");
                     SlowRPG_Write("You choose not to praise it.");
-                    StaticRoom.room8.clear1 = true;
+                    room.clear1 = true;
                 }
 
-                if (!StaticRoom.room8.clear1)
+                if (!room.clear1)
                 {
                     //If missing HP is greater than 10 or equal to 10 simply add 10 onto current HP
                     if ((StaticPlayer.player.maxhealth - StaticPlayer.player.health) >= 10)
@@ -50,11 +50,11 @@ namespace Rooms
                     StaticPlayer.player.subjectOfLordBacon = true;
                     Room8_Dialog4();
 
-                    StaticRoom.room8.clear1 = true;
+                    room.clear1 = true;
                 }
             }
 
-            if (StaticRoom.room8.clear1 && !StaticRoom.room8.clear2)
+            if (room.clear1 && !room.clear2)
             {
                 int room8_playerChoice2 = Menu(header: "Do you: ", alternatives: "Examine the rest of the shrine.. Return to room 7, Hobgoblin room.".Split(". "));
 
@@ -72,18 +72,18 @@ namespace Rooms
 
                         SlowRPG_Write("This could be useful.");
                         SlowRPG_Write("You find nothing else.");
-                        StaticRoom.room8.clear2 = true;
+                        room.clear2 = true;
                         break;
                     case 2:
                         SlowRPG_Write("");
                         SlowRPG_Write("You choose to return to room 7, Hobgoblin room.");
                         GameLogic.currentRoom = 7;
-                        StaticRoom.room8.specialInteraction = true;
+                        room.specialInteraction = true;
                         return;
                 }
             }
 
-            if (StaticRoom.room8.specialInteraction)
+            if (room.specialInteraction)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("You return to the ", sameLine: true);
@@ -91,7 +91,7 @@ namespace Rooms
                 SlowRPG_Write(".");
             }
 
-            if (StaticRoom.room8.clear2)
+            if (room.clear2)
             {
                 SlowRPG_Write("");
                 SlowRPG_Write("There is nothing else in the shrine.");
@@ -100,7 +100,7 @@ namespace Rooms
                 int room8_playerChoice3 = Menu(header: "Return to room 7, Hobgoblin room: ", alternatives: "Yes".Split(". "));
 
                 GameLogic.currentRoom = 7;
-                StaticRoom.room8.specialInteraction = true;
+                room.specialInteraction = true;
                 return;
             }
         }

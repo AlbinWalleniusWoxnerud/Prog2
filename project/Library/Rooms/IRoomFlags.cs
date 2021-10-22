@@ -3,7 +3,7 @@ using System;
 namespace Library
 {
     //Room logic, or rather room eventflags 
-    public interface IRoom
+    public interface IRoomFlags
     {
         bool clear1 { get; set; }
         bool clear2 { get; set; }
