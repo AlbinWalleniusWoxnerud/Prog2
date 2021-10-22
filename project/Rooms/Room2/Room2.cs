@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
-using Battles;
 using Library;
+using Library.Battle;
 using Library.Entities;
 using Library.Entities.Enemies;
 using Text;
@@ -39,15 +39,8 @@ namespace Rooms
                     return;
                 }
 
-                Goblin goblin = new Goblin(20, 10, 5, 0.95, 5);
-
-                Battle battle = new(player, goblin);
-
-                //If battle returns true player won, if it returns false player lost and it is game over
-                if (player._alive == false)
-                {
-                    return;
-                }
+                Fight fight = new(player, new Goblin(20, 10, 5, 0.95, 5));
+                if (player._alive == false) return;
 
                 Dialog2();
 

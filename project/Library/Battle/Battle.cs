@@ -4,11 +4,11 @@ using Library;
 using Library.Entities;
 using Text;
 
-namespace Battles
+namespace Library.Battle
 {
-    partial class Battle
+    partial class Fight
     {
-        public Battle(Player player, EnemyBase enemy)
+        public Fight(Player player, EnemyBase enemy)
         {
             isCombatansAlive = true;
             battleRound = 1;

@@ -1,7 +1,9 @@
 using System;
 using System.Threading;
 using Library;
+using Library.Battle;
 using Library.Entities;
+using Library.Entities.Enemies;
 using Text;
 namespace Rooms
 {
@@ -20,7 +22,7 @@ namespace Rooms
                 int room9_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight".Split(". "));
 
                 //This battle will always be lost so don't return
-                Battle5Method.Battle5();
+                Fight fight = new(player, new Dragonling());
 
                 Dialog2();
 
@@ -28,7 +30,6 @@ namespace Rooms
                 {
                     TextRender.Render("");
                     TextRender.Render("You died", color: Color.DarkRed);
-                    player.alive = false;
                     TextRender.Render("");
                     return;
                 }

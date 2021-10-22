@@ -10,12 +10,12 @@ namespace Rooms
         public Room_6(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
         }
-        public static void Room6()
+        private protected override void RoomInteraction()
         {
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room6_Dialog1();
+                Dialog1();
                 room.clear1 = true;
             }
 
@@ -34,7 +34,8 @@ namespace Rooms
                             TextRender.Render("");
                             TextRender.Render("+5 attack", color: Color.White);
                             TextRender.Render("-10 health", color: Color.Red);
-                            player.health -= 10;
+                            player.TakeDamage(10);
+                            if (player._alive == false) return;
                             player.attack += 5;
 
                             TextRender.Render("");
@@ -50,16 +51,16 @@ namespace Rooms
                             useBranchOfTheSinner = false;
                             break;
                     }
-                    if (IsGameOver()) return;
                 }
                 room.clear2 = true;
             }
 
-            if (!room.clear3)
+            if (room.clear3 == false)
             {
-                //Un-skippable dialog due to change in status
-                Room6_Dialog2();
-                player.health += 10;
+                Dialog2();
+                player.PartialHeal(10);
+                if (player._alive == false) return;
+
                 player.attack += 10;
 
                 TextRender.Render("You search through the rest of the room and find nothing of interest.");

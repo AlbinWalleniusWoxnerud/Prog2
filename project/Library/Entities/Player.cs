@@ -43,12 +43,20 @@ namespace Library.Entities
             }
         }
 
+        public void PartialHeal(int val)
+        {
+            if (val == 10 || val == 25)
+            {
+                this._health += val;
+            }
+            else
+            {
+                this.TakeDamage(die: true);
+            }
+        }
         public void FullHeal()
         {
-            if (this.hasTrueKey == true)
-            {
-                this._health = maxhealth;
-            }
+            this._health = maxhealth;
         }
 
         // internal static void Battle(Player player, Enemy enemy)

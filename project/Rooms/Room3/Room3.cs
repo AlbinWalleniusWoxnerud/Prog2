@@ -15,7 +15,7 @@ namespace Rooms
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room3_Dialog1();
+                Dialog1();
 
                 int room3_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2, 1st goblin room.".Split(". "));
 
@@ -35,7 +35,7 @@ namespace Rooms
                 // }
 
                 //Un-skippable dialog due to change in player status
-                Room3_Dialog2();
+                Dialog2();
 
                 room.clear1 = true;
             }

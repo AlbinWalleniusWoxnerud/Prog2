@@ -5,9 +5,9 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_4 : RoomBase
+    partial class Room_7 : RoomBase
     {
-        public static void Room7_Dialog1()
+        public void Dialog1()
         {
             TextRender.Render("You explore the path and end up in another dark room with the marking: ", sameLine: true);
             TextRender.Render("Room 3", sameLine: true, color: Color.White);
@@ -22,7 +22,7 @@ namespace Rooms
             TextRender.Render("Hobgoblin", sameLine: true, color: Color.DarkGreen);
             TextRender.Render(".");
         }
-        public static void Room7_Dialog2()
+        public void Dialog2()
         {
             TextRender.Render("After killing the ", sameLine: true);
             TextRender.Render("Hobgoblin", sameLine: true, color: Color.DarkGreen);
@@ -30,7 +30,7 @@ namespace Rooms
             TextRender.Render("meat", sameLine: true, color: Color.Red);
             TextRender.Render(" which looks supremely succulent.");
         }
-        public static void Room7_Dialog3()
+        public void Dialog3()
         {
             TextRender.Render("");
             TextRender.Render("You search around the rest of the room and find a ", sameLine: true);

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
-using Battles;
 using Library;
+using Library.Battle;
 using Library.Entities;
 using Library.Entities.Enemies;
 using Text;
@@ -11,13 +11,13 @@ namespace Program
     {
         static void Main()
         {
-            TextRender.Table TextRender.Table = new TextRender.Table();
+            Menu menu = new();
 
             //UTF-8
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             //Introduction
-            TextRender.Table.Introduction();
+            menu.Introduction();
 
             while (true)
             {
@@ -44,7 +44,7 @@ namespace Program
                                 rooms[i] = new RoomFlags();
                             }
                             //Intro dialog
-                            TextRender.Table.Greetings();
+                            menu.Greetings();
 
                             //While the game isn't over
                             while (player._alive == true)
@@ -61,7 +61,7 @@ namespace Program
                         break;
                     case 2:
                         //Change settings of game
-                        TextRender.Table.Settings();
+                        menu.Settings();
                         break;
                     case 3:
                         //End program
@@ -72,8 +72,8 @@ namespace Program
 
             static void InitiateEvents(Player player, Goblin g)
             {
-                player.PlayerDeathEventHandler += Battles.Battle.player_PlayerDeathEventHandler;
-                g.EnemyDeathEventHandler += Battles.Battle.enemy_EnemyDeathEventHandler;
+                player.PlayerDeathEventHandler += Fight.player_PlayerDeathEventHandler;
+                g.EnemyDeathEventHandler += Fight.enemy_EnemyDeathEventHandler;
             }
         }
     }

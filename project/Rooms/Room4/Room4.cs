@@ -23,7 +23,7 @@ namespace Rooms
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room4_Dialog1();
+                Dialog1();
                 room.clear1 = true;
             }
 
@@ -116,7 +116,7 @@ namespace Rooms
                 }
 
                 //Un-skippable due to major event
-                Room4_Dialog2();
+                Dialog2();
 
                 player.hasBossKey = true;
 

@@ -5,9 +5,9 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_4 : RoomBase
+    partial class Room_8 : RoomBase
     {
-        public static void Room8_Dialog1()
+        public void Dialog1()
         {
             TextRender.Render("You explore the deep path and come to massive gate");
             TextRender.Render("It says: ");
@@ -30,7 +30,7 @@ namespace Rooms
             TextRender.Render("...");
             TextRender.Render("");
         }
-        public static void Room8_Dialog2()
+        public void Dialog2()
         {
             TextRender.Render("You choose to praise the statue.");
             TextRender.Render("");
@@ -41,7 +41,7 @@ namespace Rooms
             TextRender.Render("Heal ", sameLine: true);
             TextRender.Render("10 HP", sameLine: true, color: Color.White);
         }
-        public static void Room8_Dialog3()
+        public void Dialog3()
         {
             TextRender.Render("");
             TextRender.Render("Gained Buff: ", sameLine: true);
@@ -55,7 +55,7 @@ namespace Rooms
             TextRender.Render($"{player.attack}", sameLine: true, color: Color.White);
             TextRender.Render(" current attack.");
         }
-        public static void Room8_Dialog4()
+        public void Dialog4()
         {
             TextRender.Render("");
             TextRender.Render("After a while the ", sameLine: true);

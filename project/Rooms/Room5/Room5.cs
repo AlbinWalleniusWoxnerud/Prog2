@@ -1,7 +1,9 @@
 using System;
 using System.Threading;
 using Library;
+using Library.Battle;
 using Library.Entities;
+using Library.Entities.Enemies;
 using Text;
 namespace Rooms
 {
@@ -15,7 +17,7 @@ namespace Rooms
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room5_Dialog1();
+                Dialog1();
                 room.clear1 = true;
             }
 
@@ -45,11 +47,8 @@ namespace Rooms
                         return;
                     }
 
-                    //If battle returns true player won, if it returns false player lost and it is game over
-                    if (!Battle4Method.Battle4())
-                    {
-                        return;
-                    }
+                    Fight fight = new(player, new Wolf());
+                    if (player._alive == false) return;
 
                     TextRender.Render("After deafeating the wolf you decide to examine the rest of the room.");
 

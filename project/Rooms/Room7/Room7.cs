@@ -1,21 +1,23 @@
 using System;
 using System.Threading;
 using Library;
+using Library.Battle;
 using Library.Entities;
+using Library.Entities.Enemies;
 using Text;
 namespace Rooms
 {
-    partial class Room_3 : RoomBase
+    partial class Room_7 : RoomBase
     {
         public Room_7(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
         }
-        public static void Room7()
+        private protected override void RoomInteraction()
         {
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room7_Dialog1();
+                Dialog1();
 
                 int room7_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2".Split(". "));
 
@@ -29,12 +31,10 @@ namespace Rooms
                 }
 
                 //If battle returns true player won, if it returns false player lost and it is game over
-                if (!Battle2Method.Battle2())
-                {
-                    return;
-                }
+                Fight fight = new(player, new HobGoblin());
+                if (player._alive == false) return;
 
-                Room7_Dialog2();
+                Dialog2();
 
                 int room7_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Eat it.. Don't eat the meat you just took from a Hobgoblins body.".Split(". "));
 
@@ -46,7 +46,9 @@ namespace Rooms
                         TextRender.Render("You choose to eat the meat of the ", sameLine: true);
                         TextRender.Render("Hobgoblin", sameLine: true, color: Color.DarkGreen);
                         TextRender.Render("...");
-                        player.health += 25;
+                        player.PartialHeal(25);
+                        if (player._alive == false) return;
+
                         player.maxhealth += 25;
                         TextRender.Render("");
                         TextRender.Render("You gain ", sameLine: true);
@@ -64,7 +66,7 @@ namespace Rooms
                         break;
                 }
 
-                Room7_Dialog3();
+                Dialog3();
 
                 room.clear1 = true;
             }

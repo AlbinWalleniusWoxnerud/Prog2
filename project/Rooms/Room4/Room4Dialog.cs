@@ -7,7 +7,7 @@ namespace Rooms
 {
     partial class Room_4 : RoomBase
     {
-        public static void Room4_Dialog1()
+        public static void Dialog1()
         {
             TextRender.Render("You explore the new path and end up in another dark room with another marking.");
             TextRender.Render("");
@@ -34,7 +34,7 @@ namespace Rooms
             TextRender.Render(" to go deeper into the maze.");
             TextRender.Render("Luck is on your side and you find yet another new path, yay...");
         }
-        public static void Room4_Dialog2()
+        public static void Dialog2()
         {
             TextRender.Render("Inside the ", sameLine: true);
             TextRender.Render("chest", sameLine: true, color: Color.White);

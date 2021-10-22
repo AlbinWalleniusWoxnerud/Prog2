@@ -5,9 +5,9 @@ using Library;
 using Library.Entities;
 using Text;
 
-namespace Battles
+namespace Library.Battle
 {
-    partial class Battle
+    partial class Fight
     {
         private static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
         {
@@ -94,7 +94,7 @@ namespace Battles
                 TextRender.Render("");
                 return true;
             }
-            else /* (player._alive == false) */
+            else
             {
                 if (enemy.entityType == EntityType.Dragonling)
                 {
@@ -106,7 +106,6 @@ namespace Battles
                 TextRender.Render("");
                 TextRender.Render("You lost the battle, and died!", color: Text.Color.DarkRed);
                 TextRender.Render("");
-                // player.alive = false;
                 return true;
             }
         }

@@ -5,17 +5,17 @@ using Library.Entities;
 using Text;
 namespace Rooms
 {
-    partial class Room_3 : RoomBase
+    partial class Room_8 : RoomBase
     {
         public Room_8(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
         {
         }
-        public static void Room8()
+        private protected override void RoomInteraction()
         {
             if (!room.clear1)
             {
                 //Usual dialog with skip
-                Room8_Dialog1();
+                Dialog1();
 
                 int room8_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Praise it.. Don' praise it.".Split(". "));
 
@@ -32,26 +32,26 @@ namespace Rooms
                     //If missing HP is greater than 10 or equal to 10 simply add 10 onto current HP
                     if ((player.maxhealth - player.health) >= 10)
                     {
-                        player.health = player.health + 10;
+                        player.PartialHeal(10);
                     }
 
-                    //If missing HP is less than 10 the player will heal all the missing health but nothing more, the 'else if' can be changed to simply else but the readability would be harmed
+                    //If missing HP is less than 10 the player will heal all the missing health but nothing more
                     else if ((player.maxhealth - player.health) < 10)
                     {
-                        player.health = player.health + (player.maxhealth - player.health);
+                        player.FullHeal();
                     }
 
                     //Un-skippable dialog due to change in player status
-                    Room8_Dialog2();
+                    Dialog2();
 
                     //Player gets +10 attack
                     player.attack += 10;
 
                     //Un-skippable dialog due to change in player status, dialog happens after the increase in attack so it displays the right values 
-                    Room8_Dialog3();
+                    Dialog3();
 
                     player.subjectOfLordBacon = true;
-                    Room8_Dialog4();
+                    Dialog4();
 
                     room.clear1 = true;
                 }

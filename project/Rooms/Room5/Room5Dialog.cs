@@ -7,7 +7,7 @@ namespace Rooms
 {
     partial class Room_5 : RoomBase
     {
-        public static void Room5_Dialog1()
+        public static void Dialog1()
         {
             TextRender.Render("You explore the new path and end up in another dark room with another marking.");
             TextRender.Render("");
