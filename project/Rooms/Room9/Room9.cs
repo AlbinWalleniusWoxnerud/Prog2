@@ -21,12 +21,14 @@ namespace Rooms
 
                 int room9_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight".Split(". "));
 
+                player.finalFight = true;
+
                 //This battle will always be lost so don't return
                 Fight fight = new(player, new Dragonling());
 
                 Dialog2();
 
-                if (!player.subjectOfLordBacon)
+                if (player.subjectOfLordBacon == false)
                 {
                     TextRender.Render("");
                     TextRender.Render("You died", color: Color.DarkRed);
@@ -35,6 +37,8 @@ namespace Rooms
                 }
 
                 Dialog3();
+
+                player.Revive();
 
                 player.hasTrueKey = true;
                 if (player.chooseShield)

@@ -30,21 +30,19 @@ namespace Program
                     //Play game
                     case 1:
 
-                        CurrentRun currentRun = new();
-                        Player player = new Player();
-                        InitiateEvents(player);
-                        player.TakeDamage(die: true);
-
                         //While gamelogic
                         do
                         {
-                            // InitiateEvents(player, g);
-
+                            CurrentRun currentRun = new();
+                            Player player = new Player();
                             RoomFlags[] rooms = new RoomFlags[9];
                             for (int i = 0; i < 9; i++)
                             {
                                 rooms[i] = new RoomFlags();
                             }
+
+                            InitiateEvent(player);
+
                             //Intro dialog
                             menu.Greetings();
 
@@ -56,9 +54,9 @@ namespace Program
                             }
 
                             //Play again yes/no
-                            // IsPlayAgain();
+                            menu.IsPlayAgain();
                         }
-                        while (currentRun.playAgain);
+                        while (menu.playAgain);
 
                         break;
                     case 2:
@@ -72,7 +70,7 @@ namespace Program
                 }
             }
 
-            static void InitiateEvents(Player player)
+            static void InitiateEvent(Player player)
             {
                 player.PlayerDeathEventHandler += Fight.player_PlayerDeathEventHandler;
             }

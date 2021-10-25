@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\git\\Prog2\\project\\project.csproj": {}
+    "C:\\githubschool\\Prog2\\project\\project.csproj": {}
   },
   "projects": {
-    "E:\\git\\Prog2\\project\\project.csproj": {
+    "C:\\githubschool\\Prog2\\project\\project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\git\\Prog2\\project\\project.csproj",
+        "projectUniqueName": "C:\\githubschool\\Prog2\\project\\project.csproj",
         "projectName": "project",
-        "projectPath": "E:\\git\\Prog2\\project\\project.csproj",
-        "packagesPath": "C:\\Users\\albin\\.nuget\\packages\\",
-        "outputPath": "E:\\git\\Prog2\\project\\obj\\",
+        "projectPath": "C:\\githubschool\\Prog2\\project\\project.csproj",
+        "packagesPath": "C:\\Users\\albin.walleniuswoxn\\.nuget\\packages\\",
+        "outputPath": "C:\\githubschool\\Prog2\\project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\albin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\albin.walleniuswoxn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

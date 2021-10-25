@@ -5,7 +5,7 @@ namespace Library
     internal class Menu
     {
         internal bool play { get; set; } = true;
-        internal bool playAgain { get; set; } = true;
+        internal bool playAgain { get; set; } = false;
 
         public void Settings()
         {
@@ -50,6 +50,20 @@ namespace Library
                     break;
             }
 
+        }
+        //Check if the player want to play another game
+        internal void IsPlayAgain()
+        {
+            TextRender.Render("Would you like to play again?");
+            int input = TextRender.Table("Menu:", "Play again.. End game.".Split(". "));
+            switch (input)
+            {
+                case 1:
+                    this.playAgain = true;
+                    break;
+                case 2:
+                    break;
+            }
         }
         internal void Introduction()
         {

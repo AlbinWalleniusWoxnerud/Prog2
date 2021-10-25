@@ -5,6 +5,5 @@ namespace Library
     {
         internal int currentRoom { get; set; } = 1;
         internal bool conquered { get; set; } = false;
-        internal bool playAgain { get; set; } = false;
     }
 }

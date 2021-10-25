@@ -18,7 +18,7 @@ namespace Library.Battle
 
 
             //If attacker crits 2x the damage
-            if (/* (100 - attacker.crit) <= new Random().Next(1, 100) */true)
+            if ((100 - attacker.crit) <= new Random().Next(1, 100))
             {
                 TextRender.Render($"{attacker.entityType} crit!", color: Text.Color.White);
                 damage *= 2;
@@ -112,7 +112,7 @@ namespace Library.Battle
 
         public static void player_PlayerDeathEventHandler(Object sender, PlayerDeathEventArgs e)
         {
-            if ((Boolean)sender.GetType().GetProperty("hasTrueKey").GetValue(sender))
+            if ((Boolean)sender.GetType().GetProperty("finalFight").GetValue(sender))
             {
                 Console.WriteLine("hahahah");
             }

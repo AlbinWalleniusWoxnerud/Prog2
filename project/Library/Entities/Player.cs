@@ -15,6 +15,7 @@ namespace Library.Entities
         public bool brokenChestKey { get; set; } = false;
         public bool hasBossKey { get; set; } = false;
         public bool hasTrueKey { get; set; } = false;
+        public bool finalFight { get; set; } = false;
 
         //Player initialization with default values
         internal Player(int health = 100, int maxhealth = 100, int shield = 0, int attack = 1, double defense = 1, int crit = 10)
@@ -57,6 +58,14 @@ namespace Library.Entities
         public void FullHeal()
         {
             this._health = maxhealth;
+        }
+
+        public void Revive()
+        {
+            if (this.subjectOfLordBacon)
+            {
+                this._alive = true;
+            }
         }
 
         // internal static void Battle(Player player, Enemy enemy)

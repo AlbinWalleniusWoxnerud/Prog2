@@ -10,6 +10,7 @@ namespace Library.Battle
     {
         public Fight(Player player, EnemyBase enemy)
         {
+            enemy.EnemyDeathEventHandler += Fight.enemy_EnemyDeathEventHandler;
             isCombatansAlive = true;
             battleRound = 1;
             Combat(player, enemy);
