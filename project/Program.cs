@@ -47,7 +47,7 @@ namespace Program
                             menu.Greetings();
 
                             //While the game isn't over
-                            while (player._alive == true)
+                            while (player._alive == true && currentRun.conquered == false)
                             {
                                 //Go to the room indicated by Gamelogic
                                 InitRoom(player, rooms, currentRun);

@@ -1,12 +1,10 @@
-namespace Library.Entities
+namespace Library.Entities;
+public enum EntityType : byte
 {
-    public enum EntityType : byte
-    {
-        Player,
-        Goblin,
-        Goblins,
-        HobGoblin,
-        Wolf,
-        Dragonling
-    }
+    Player,
+    Goblin,
+    Goblins,
+    HobGoblin,
+    Wolf,
+    Dragonling
 }

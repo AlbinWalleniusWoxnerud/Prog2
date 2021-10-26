@@ -1,5 +1,3 @@
-using Library.Entities;
-
 namespace Library.Entities
 {
     namespace Enemies

@@ -28,3 +28,4 @@ C:\githubschool\Prog2\project\obj\Debug\net6.0\project.dll
 C:\githubschool\Prog2\project\obj\Debug\net6.0\ref\project.dll
 C:\githubschool\Prog2\project\obj\Debug\net6.0\project.pdb
 C:\githubschool\Prog2\project\obj\Debug\net6.0\project.genruntimeconfig.cache
+C:\githubschool\Prog2\project\obj\Debug\net6.0\project.GlobalUsings.g.cs
