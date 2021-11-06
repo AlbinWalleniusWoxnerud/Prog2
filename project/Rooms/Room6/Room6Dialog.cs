@@ -17,7 +17,7 @@ partial class Room_6 : RoomBase
         TextRender.Render("");
         TextRender.Render("It reads: ");
         TextRender.Render("'The ", sameLine: true);
-        TextRender.Render("computer with the keyboard", sameLine: true, color: Color.White);
+        TextRender.Render("password for the computer", sameLine: true, color: Color.White);
         TextRender.Render(" is out of order, sorry.' - ", sameLine: true);
         TextRender.Render("Lord of Bacon", color: Color.Yellow);
         TextRender.Render("Damnable Gods, can't even handel a computer.");
