@@ -34,6 +34,8 @@ partial class Room_7 : RoomBase
         TextRender.Render("special password", sameLine: true, color: Color.White);
         TextRender.Render(", but where would you find that.");
         TextRender.Render("");
+        TextRender.Render("You try some more combinations and the machine lights up!");
+        TextRender.Render("");
         TextRender.Render("You also find a new, even deeper ", sameLine: true);
         TextRender.Render("path", sameLine: true, color: Color.White);
         TextRender.Render(".");
