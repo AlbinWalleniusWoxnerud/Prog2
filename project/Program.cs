@@ -3,9 +3,6 @@ class Program : Methods
 {
     static void Main()
     {
-
-        SpecialEncounters.Machine.MachineActivationWithoutPassword();
-
         Menu menu = new();
 
         //UTF-8

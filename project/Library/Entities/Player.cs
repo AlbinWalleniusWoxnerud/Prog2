@@ -86,7 +86,6 @@ public class Player : EntityBase
         }
         TextRender.Render("");
         TextRender.Render("Your stupidity increases...", color: Text.Color.DarkGreen);
-        TextRender.Render("");
 
         //Increase stupidity
         this.stupidity++;

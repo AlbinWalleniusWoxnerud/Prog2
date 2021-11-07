@@ -4,7 +4,7 @@ partial class Room_7 : RoomBase
     public Room_7(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
     {
     }
-    private protected override void RoomInteraction()
+    private protected override async void RoomInteraction()
     {
         if (!room.clear1)
         {
@@ -58,19 +58,19 @@ partial class Room_7 : RoomBase
                     break;
             }
 
-            Dialog3();
+            await Dialog3();
 
             room.clear1 = true;
         }
 
-
+    Room:
         if (room.specialInteraction)
         {
             TextRender.Render("");
             TextRender.Render("You return to the room marked: ", sameLine: true);
             TextRender.Render("Room 7", color: Color.White);
         }
-        int room7_playerChoice3 = TextRender.Table(header: "What do you do? ", alternatives: "Go to the even deeper path.. Return to room 2.".Split(". "));
+        int room7_playerChoice3 = TextRender.Table(header: "What do you do? ", alternatives: "Go to the even deeper path.. Use the machine.. Return to room 2.".Split(". "));
 
         switch (room7_playerChoice3)
         {
@@ -81,10 +81,35 @@ partial class Room_7 : RoomBase
                 currentRun.currentRoom = 8;
                 return;
             case 2:
+                TextRender.Render("You choose to use the machine.");
+                await MachineActivationWithoutPassword();
+                break;
+            case 3:
                 TextRender.Render("You choose to return to room 2.");
                 currentRun.currentRoom = 2;
                 room.specialInteraction = true;
                 return;
         }
+        goto Room;
+    }
+    private static async Task MachineActivationWithoutPassword()
+    {
+        Boolean Continue = true;
+        do
+        {
+            await SpecialEncounters.Machine.MachineActivationWithoutPassword();
+
+            int choice = TextRender.Table(header: "Do you want to search again?: ", alternatives: "Yes.. No.".Split(". "));
+
+            switch (choice)
+            {
+                case 1:
+                    break;
+                case 2:
+                    Continue = true;
+                    break;
+            }
+
+        } while (Continue);
     }
 }
