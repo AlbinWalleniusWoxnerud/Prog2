@@ -106,7 +106,7 @@ partial class Room_7 : RoomBase
                 case 1:
                     break;
                 case 2:
-                    Continue = true;
+                    Continue = false;
                     break;
             }
 
