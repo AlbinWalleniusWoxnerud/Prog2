@@ -1,0 +1,10 @@
+@startuml
+enum EntityType {
+    Player,
+    Goblin,
+    Goblins,
+    HobGoblin,
+    Wolf,
+    Dragonling,
+}
+@enduml

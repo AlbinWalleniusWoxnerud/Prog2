@@ -107,7 +107,8 @@ partial class Fight
     {
         if ((Boolean)sender.GetType().GetProperty("finalFight").GetValue(sender))
         {
-            Console.WriteLine("hahahah");
+            TextRender.Render("");
+            TextRender.Render($"The player died at {e.TimeOfDeath}.", color: Text.Color.DarkGray);
         }
         else
         {

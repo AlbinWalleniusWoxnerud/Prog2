@@ -1,0 +1,8 @@
+@startuml
+interface IRoomFlags {
+    clear1 : bool <<get>> <<set>>
+    clear2 : bool <<get>> <<set>>
+    clear3 : bool <<get>> <<set>>
+    specialInteraction : bool <<get>> <<set>>
+}
+@enduml

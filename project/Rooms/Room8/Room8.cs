@@ -4,7 +4,7 @@ partial class Room_8 : RoomBase
     public Room_8(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
     {
     }
-    private protected override void RoomInteractionAsync()
+    private protected override void RoomInteractionSync()
     {
         if (!room.clear1)
         {

@@ -1,0 +1,9 @@
+@startuml
+abstract class RoomBase {
+    + RoomBase(player:Player, room:RoomFlags, currentRun:CurrentRun)
+}
+IRoomBase <|-- RoomBase
+RoomBase --> "player" Player
+RoomBase --> "room" RoomFlags
+RoomBase --> "currentRun" CurrentRun
+@enduml

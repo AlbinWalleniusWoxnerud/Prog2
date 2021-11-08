@@ -1,0 +1,8 @@
+@startuml
+interface IRoomBase {
+    RoomBase(player:Player, room:RoomFlags, currentRun:CurrentRun) : void
+}
+IRoomBase --> "player" Player
+IRoomBase --> "room" RoomFlags
+IRoomBase --> "currentRun" CurrentRun
+@enduml

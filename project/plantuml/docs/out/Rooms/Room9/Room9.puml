@@ -1,0 +1,6 @@
+@startuml
+class Room_9 <<partial>> {
+    + Room_9(player:Player, room:RoomFlags, currentRun:CurrentRun)
+}
+RoomBase <|-- Room_9
+@enduml

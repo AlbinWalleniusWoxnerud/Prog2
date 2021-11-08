@@ -1,0 +1,6 @@
+@startuml
+abstract class EnemyBase {
+    +  <<event>> EnemyDeathEventHandler : EventHandler<EnemyDeathEventArgs> 
+}
+EntityBase <|-- EnemyBase
+@enduml

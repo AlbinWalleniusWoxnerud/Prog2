@@ -1,0 +1,6 @@
+@startuml
+class APIHelper <<static>> {
+    + {static} InitializeClient() : void
+}
+APIHelper --> "ApiClient" HttpClient
+@enduml

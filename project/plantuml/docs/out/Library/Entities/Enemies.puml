@@ -1,0 +1,14 @@
+@startuml
+class Goblin {
+}
+class HobGoblin {
+}
+class Dragonling {
+}
+class Wolf {
+}
+EnemyBase <|-- Goblin
+EnemyBase <|-- HobGoblin
+EnemyBase <|-- Dragonling
+EnemyBase <|-- Wolf
+@enduml

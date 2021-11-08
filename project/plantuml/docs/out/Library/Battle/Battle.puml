@@ -1,0 +1,5 @@
+@startuml
+class Fight <<partial>> {
+    + Fight(player:Player, enemy:EnemyBase)
+}
+@enduml

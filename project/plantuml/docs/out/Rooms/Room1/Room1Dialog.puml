@@ -1,0 +1,5 @@
+@startuml
+class Room_1 <<partial>> {
+}
+RoomBase <|-- Room_1
+@enduml

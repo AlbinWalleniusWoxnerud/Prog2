@@ -4,7 +4,7 @@ partial class Room_3 : RoomBase
     public Room_3(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
     {
     }
-    private protected override void RoomInteractionAsync()
+    private protected override void RoomInteractionSync()
     {
         if (!room.clear1)
         {
@@ -22,13 +22,9 @@ partial class Room_3 : RoomBase
                 return;
             }
 
-            //If battle returns true player won, if it returns false player lost and it is game over
-            // if (!Battle3Method.Battle3())
-            // {
-            //     return;
-            // }
+            Fight fight = new(player, new Goblin());
+            if (player._alive == false) return;
 
-            //Un-skippable dialog due to change in player status
             Dialog2();
 
             room.clear1 = true;
