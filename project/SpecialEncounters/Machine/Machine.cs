@@ -18,7 +18,7 @@ public class Machine
         try
         {
             var movie = await GETFromAPI(searchTerm);
-            TextRender.Render($"Name: {movie.Name}\nLanguage: {movie.Language}\nPremiered: {movie.Premiered}\nAverage Runtime: {movie.AverageRuntime}\nStatus: {movie.Status}", color: Color.White);
+            TextRender.Render($"Name: {movie.Name}\nLanguage: {movie.Language}\nPremiered: {movie.Premiered}\nAverage Runtime: {movie.AverageRuntime} min\nStatus: {movie.Status}", color: Color.White);
         }
         catch (System.Exception)
         {
@@ -29,14 +29,13 @@ public class Machine
 
     private static async Task<APIMovieResponseModel> GETFromAPI(string searchTerm = "Rocky")
     {
-        TextRender.Render("");
         TextRender.Render("Fetching data...");
         TextRender.Render("");
-        using (HttpResponseMessage responseMessage = await APIHelper.ApiClient.GetAsync($"shows?q={searchTerm}"))
+        using (HttpResponseMessage responseMessage = APIHelper.ApiClient.GetAsync($"shows?q={searchTerm}").Result)
         {
             if (responseMessage.IsSuccessStatusCode)
             {
-                APIMovieResponseModel movie = await responseMessage.Content.ReadAsAsync<APIMovieResponseModel>();
+                APIMovieResponseModel movie = responseMessage.Content.ReadAsAsync<APIMovieResponseModel>().Result;
                 return movie;
             }
             else

@@ -4,7 +4,7 @@ partial class Room_7 : RoomBase
     public Room_7(Player player, RoomFlags room, CurrentRun currentRun) : base(player, room, currentRun)
     {
     }
-    private protected override async void RoomInteraction()
+    private protected override void RoomInteractionAsync()
     {
         if (!room.clear1)
         {
@@ -58,12 +58,9 @@ partial class Room_7 : RoomBase
                     break;
             }
 
-            await Dialog3();
-
+            Dialog3();
             room.clear1 = true;
         }
-
-    Room:
         if (room.specialInteraction)
         {
             TextRender.Render("");
@@ -82,7 +79,7 @@ partial class Room_7 : RoomBase
                 return;
             case 2:
                 TextRender.Render("You choose to use the machine.");
-                await MachineActivationWithoutPassword();
+                MachineActivationWithoutPassword();
                 break;
             case 3:
                 TextRender.Render("You choose to return to room 2.");
@@ -90,14 +87,13 @@ partial class Room_7 : RoomBase
                 room.specialInteraction = true;
                 return;
         }
-        goto Room;
     }
-    private static async Task MachineActivationWithoutPassword()
+    private static void MachineActivationWithoutPassword()
     {
         Boolean Continue = true;
         do
         {
-            await SpecialEncounters.Machine.MachineActivationWithoutPassword();
+            SpecialEncounters.Machine.MachineActivationWithoutPassword();
 
             int choice = TextRender.Table(header: "Do you want to search again?: ", alternatives: "Yes.. No.".Split(". "));
 

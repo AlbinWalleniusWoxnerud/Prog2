@@ -7,9 +7,9 @@ internal abstract class RoomBase : IRoomBase
         this.player = player;
         this.room = room;
         this.currentRun = currentRun;
-        this.RoomInteraction();
+        this.RoomInteractionAsync();
     }
-    private protected abstract void RoomInteraction();
+    private protected abstract void RoomInteractionAsync();
 
     public Player player { get; set; }
     public RoomFlags room { get; set; }

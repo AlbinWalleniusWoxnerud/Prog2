@@ -33,3 +33,6 @@ E:\git\Prog2\project\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 E:\git\Prog2\project\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\git\Prog2\project\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 E:\git\Prog2\project\obj\Debug\net6.0\project.GlobalUsings.g.cs
+C:\githubschool\Prog2\project\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\githubschool\Prog2\project\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\githubschool\Prog2\project\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

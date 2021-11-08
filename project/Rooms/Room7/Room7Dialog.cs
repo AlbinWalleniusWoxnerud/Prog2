@@ -24,7 +24,7 @@ partial class Room_7 : RoomBase
         TextRender.Render("meat", sameLine: true, color: Color.Red);
         TextRender.Render(" which looks supremely succulent.");
     }
-    public async Task Dialog3()
+    public void Dialog3()
     {
         TextRender.Render("");
         TextRender.Render("You search around the rest of the room and find a ", sameLine: true);
@@ -35,14 +35,14 @@ partial class Room_7 : RoomBase
         TextRender.Render(", but where would you find that.");
         TextRender.Render("");
         TextRender.Render("You try some more combinations and the machine lights up!");
-        await MachineActivationWithoutPasswordDialog();
+        MachineActivationWithoutPasswordDialog();
         TextRender.Render("");
         TextRender.Render("You also find a new, even deeper ", sameLine: true);
         TextRender.Render("path", sameLine: true, color: Color.White);
         TextRender.Render(".");
     }
 
-    private static async Task MachineActivationWithoutPasswordDialog()
+    private void MachineActivationWithoutPasswordDialog()
     {
         TextRender.Render("");
         TextRender.Render("TV Information.");
@@ -52,6 +52,6 @@ partial class Room_7 : RoomBase
         TextRender.Render("You simply press enter.");
         TextRender.Render("...", delay: 200);
         TextRender.Render("Error! Faulty search term!\nTry again!", color: Color.Red);
-        await MachineActivationWithoutPassword();
+        MachineActivationWithoutPassword();
     }
 }

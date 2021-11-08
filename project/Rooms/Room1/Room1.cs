@@ -5,7 +5,7 @@ partial class Room_1 : RoomBase
     {
     }
     //Room 1 with all of its interactions
-    private protected override void RoomInteraction()
+    private protected override void RoomInteractionAsync()
     {
         //If the player didnt clear the whole room and left, display this message when they returned
         if (!room.clear2 && room.specialInteraction) TextRender.Render("You return to the dark starting room.");
