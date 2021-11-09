@@ -1,0 +1,9 @@
+@startuml
+class RoomFlags {
+    + clear1 : bool <<get>> <<set>> = false
+    + clear2 : bool <<get>> <<set>> = false
+    + clear3 : bool <<get>> <<set>> = false
+    + specialInteraction : bool <<get>> <<set>> = false
+}
+IRoomFlags <|-- RoomFlags
+@enduml

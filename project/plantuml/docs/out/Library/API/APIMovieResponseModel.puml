@@ -1,0 +1,9 @@
+@startuml
+class APIMovieResponseModel {
+    + Name : string <<get>> <<set>>
+    + Language : string <<get>> <<set>>
+    + AverageRuntime : int <<get>> <<set>>
+    + Status : string <<get>> <<set>>
+    + Premiered : string <<get>> <<set>>
+}
+@enduml

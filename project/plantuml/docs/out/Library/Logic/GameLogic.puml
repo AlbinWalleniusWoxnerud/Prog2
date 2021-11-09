@@ -1,0 +1,15 @@
+@startuml
+class PlayerDeathEventArgs {
+    + PlayerDeathEventArgs()
+}
+class EnemyDeathEventArgs {
+    + EnemyDeathEventArgs(e:EntityType)
+}
+class Methods {
+}
+EventArgs <|-- PlayerDeathEventArgs
+PlayerDeathEventArgs --> "TimeOfDeath" DateTime
+EventArgs <|-- EnemyDeathEventArgs
+EnemyDeathEventArgs --> "TimeOfDeath" DateTime
+EnemyDeathEventArgs --> "DeadEnemyType" EntityType
+@enduml

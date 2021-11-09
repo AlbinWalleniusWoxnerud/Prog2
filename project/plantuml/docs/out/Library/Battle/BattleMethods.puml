@@ -1,0 +1,7 @@
+@startuml
+class Fight <<partial>> {
+    + {static} CheckIfWinner(player:EntityBase, enemy:EntityBase) : bool
+    + {static} player_PlayerDeathEventHandler(sender:Object, e:PlayerDeathEventArgs) : void
+    + {static} enemy_EnemyDeathEventHandler(sender:Object, e:EnemyDeathEventArgs) : void
+}
+@enduml

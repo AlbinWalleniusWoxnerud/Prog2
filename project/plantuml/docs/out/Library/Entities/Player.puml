@@ -1,0 +1,20 @@
+@startuml
+class Player {
+    +  <<event>> PlayerDeathEventHandler : EventHandler<PlayerDeathEventArgs> 
+    + maxhealth : int <<get>> <<set>>
+    + stupidity : int <<get>> = 0
+    + hasChestKey : bool <<get>> <<set>> = false
+    + subjectOfLordBacon : bool <<get>> <<set>> = false
+    + chooseShield : bool <<get>> <<set>> = false
+    + hasMeat : bool <<get>> <<set>> = false
+    + brokenChestKey : bool <<get>> <<set>> = false
+    + hasBossKey : bool <<get>> <<set>> = false
+    + hasTrueKey : bool <<get>> <<set>> = false
+    + finalFight : bool <<get>> <<set>> = false
+    + PartialHeal(val:int) : void
+    + FullHeal() : void
+    + Revive() : void
+    + isPlayerDeadStupidity() : bool
+}
+EntityBase <|-- Player
+@enduml

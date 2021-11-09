@@ -1,0 +1,9 @@
+@startuml
+class TextRender <<static>> {
+    + {static} Render(text:string, sameLine:bool, color:Color, delay:int, speed:int) : void
+    + {static} Delay : int <<get>> <<set>> = 0
+    + {static} Speed : int <<get>> <<set>> = 30
+    + {static} TableOfOptions(header:string, alternatives:string[]) : int
+}
+TextRender o-> "TextColor" Color
+@enduml

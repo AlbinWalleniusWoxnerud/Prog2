@@ -1,0 +1,12 @@
+@startuml
+interface IEntityBase {
+    health : int <<get>>
+    shield : int <<get>>
+    attack : double <<get>>
+    defense : double <<get>>
+    crit : int <<get>>
+    _alive : bool <<get>>
+    TakeDamage(damage:double, die:bool) : void
+}
+IEntityBase --> "entityType" EntityType
+@enduml

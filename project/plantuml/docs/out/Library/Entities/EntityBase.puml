@@ -1,0 +1,13 @@
+@startuml
+abstract class EntityBase {
+    + health : int <<get>>
+    + shield : int <<get>> <<set>>
+    + attack : double <<get>> <<set>>
+    + defense : double <<get>> <<set>>
+    + crit : int <<get>> <<set>>
+    + _alive : bool <<get>>
+    + TakeDamage(damage:double, die:bool) : void
+}
+IEntityBase <|-- EntityBase
+EntityBase --> "entityType" EntityType
+@enduml

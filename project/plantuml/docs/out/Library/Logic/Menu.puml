@@ -1,0 +1,5 @@
+@startuml
+class Menu {
+    + Settings() : void
+}
+@enduml
