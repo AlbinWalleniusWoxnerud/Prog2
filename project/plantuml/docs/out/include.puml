@@ -1,5 +1,6 @@
 @startuml
 !include .\\Program.puml
+!include .\\TextRender\Color.puml
 !include .\\TextRender\render.puml
 !include .\\Library\API\APIHelper.puml
 !include .\\Library\API\APIMovieResponseModel.puml

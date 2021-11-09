@@ -1,6 +1,7 @@
 namespace Library.Entities;
 public class Player : EntityBase
 {
+    //Properties specific for the player class
     public event EventHandler<PlayerDeathEventArgs> PlayerDeathEventHandler;
     public int maxhealth { get; set; }
     public int stupidity { get; private set; } = 0;
@@ -13,7 +14,16 @@ public class Player : EntityBase
     public bool hasTrueKey { get; set; } = false;
     public bool finalFight { get; set; } = false;
 
-    //Player initialization with default values
+
+    /// <summary>
+    ///Player initialization with default values 
+    /// </summary>
+    /// <param name="health"></param>
+    /// <param name="maxhealth"></param>
+    /// <param name="shield"></param>
+    /// <param name="attack"></param>
+    /// <param name="defense"></param>
+    /// <param name="crit"></param>
     internal Player(int health = 100, int maxhealth = 100, int shield = 0, int attack = 1, double defense = 1, int crit = 10)
     {
         this.health = health;
@@ -25,12 +35,17 @@ public class Player : EntityBase
         this._alive = true;
         this.entityType = EntityType.Player;
     }
+    //Override baseclass implementation with a player specific variant
     private protected override void EntityDeath()
     {
-        PlayerDeathEventArgs args = new PlayerDeathEventArgs();
-        OnPlayerDeath(args);
+        OnPlayerDeath(new PlayerDeathEventArgs());
     }
 
+    /// <summary>
+    /// /// Invoked on enemy death.
+    /// Checks if subscriber is still subscribed in which case it will invoke the subscriber method
+    /// </summary>
+    /// <param name="e"></param>
     private void OnPlayerDeath(PlayerDeathEventArgs e)
     {
         EventHandler<PlayerDeathEventArgs> handler = PlayerDeathEventHandler;
@@ -40,11 +55,12 @@ public class Player : EntityBase
         }
     }
 
+    //Player specific methods
     public void PartialHeal(int val)
     {
         if (val == 10 || val == 25)
         {
-            this._health += val;
+            this.health += val;
         }
         else
         {
@@ -53,7 +69,7 @@ public class Player : EntityBase
     }
     public void FullHeal()
     {
-        this._health = maxhealth;
+        this.health = maxhealth;
     }
 
     public void Revive()
@@ -63,11 +79,6 @@ public class Player : EntityBase
             this._alive = true;
         }
     }
-
-    // internal static void Battle(Player player, Enemy enemy)
-    // {
-
-    // }
 
     //Everytime the player does something stupid increase stupidity and display that their stupidity increased, if stupidity reaches 10 the player dies, currently only works for room 1
     public bool isPlayerDeadStupidity()

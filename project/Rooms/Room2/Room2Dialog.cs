@@ -1,5 +1,5 @@
 namespace Rooms;
-partial class Room_2
+partial class Room_2 : RoomBase
 {
     private void Dialog1()
     {

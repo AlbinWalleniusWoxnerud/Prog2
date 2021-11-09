@@ -1,27 +1,9 @@
 @startuml
 class TextRender <<static>> {
     + {static} Render(text:string, sameLine:bool, color:Color, delay:int, speed:int) : void
-    + {static} Table(header:string, alternatives:string[]) : int
-    + {static} Delay : int <<get>> <<set>>
-    + {static} Speed : int <<get>> <<set>>
-}
-enum Color {
-    Black= 0,
-    DarkBlue= 1,
-    DarkGreen= 2,
-    DarkCyan= 3,
-    DarkRed= 4,
-    DarkMagenta= 5,
-    DarkYellow= 6,
-    Gray= 7,
-    DarkGray= 8,
-    Blue= 9,
-    Green= 10,
-    Cyan= 11,
-    Red= 12,
-    Magenta= 13,
-    Yellow= 14,
-    White= 15,
+    + {static} Delay : int <<get>> <<set>> = 0
+    + {static} Speed : int <<get>> <<set>> = 30
+    + {static} TableOfOptions(header:string, alternatives:string[]) : int
 }
 TextRender o-> "TextColor" Color
 @enduml

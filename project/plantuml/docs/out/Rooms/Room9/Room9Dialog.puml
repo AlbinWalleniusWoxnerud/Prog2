@@ -1,8 +1,5 @@
 @startuml
 class Room_9 <<partial>> {
-    + Dialog1() : void
-    + Dialog2() : void
-    + Dialog3() : void
 }
 RoomBase <|-- Room_9
 @enduml

@@ -11,7 +11,7 @@ partial class Room_9 : RoomBase
             //Usual dialog with skip
             Dialog1();
 
-            int room9_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight".Split(". "));
+            int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Fight".Split(". "));
 
             player.finalFight = true;
 
@@ -58,9 +58,9 @@ partial class Room_9 : RoomBase
             TextRender.Render("You return to the ", sameLine: true);
             TextRender.Render("Boss Room", color: Color.White);
         }
-        int room9_playerChoice3 = TextRender.Table(header: "What do you do? ", alternatives: "Return to room 4, the chest room.".Split(". "));
+        int playerChoice3 = TextRender.TableOfOptions(header: "What do you do? ", alternatives: "Return to room 4, the chest room.".Split(". "));
 
-        switch (room9_playerChoice3)
+        switch (playerChoice3)
         {
             case 1:
                 TextRender.Render("");

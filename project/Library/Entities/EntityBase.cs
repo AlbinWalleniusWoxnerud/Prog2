@@ -1,7 +1,8 @@
 namespace Library.Entities;
 public abstract class EntityBase : IEntityBase
 {
-    private protected int _health;
+    //General properties which all entities inherit
+    private int _health;
     public int health { get => _health; private protected set => _health = value; }
     public int shield { get; set; }
     public double attack { get; set; }
@@ -10,10 +11,12 @@ public abstract class EntityBase : IEntityBase
     public bool _alive { get; private protected set; }
     public EntityType entityType { get; set; }
 
-    // public virtual bool Battle(Func<Player, Enemy, bool> isVictory)
-    // {
-    //     return isVictory();
-    // }
+    /// <summary>
+    /// Invoked whenever an entity takes damage, checks if it killed it
+    /// Has the option of instantly killing said entity
+    /// </summary>
+    /// <param name="damage"></param>
+    /// <param name="die">Instantly kill the entity</param>
     public void TakeDamage(double damage = 0, bool die = false)
     {
         this.health -= (int)damage;
@@ -23,6 +26,9 @@ public abstract class EntityBase : IEntityBase
             EntityDeath();
         }
     }
-
+    /// <summary>
+    /// Automatically invokes on entity death.
+    /// Override to specify behavior
+    /// </summary>
     private protected virtual void EntityDeath() { }
 }

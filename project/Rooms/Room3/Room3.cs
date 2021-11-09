@@ -11,10 +11,10 @@ partial class Room_3 : RoomBase
             //Usual dialog with skip
             Dialog1();
 
-            int room3_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2, 1st goblin room.".Split(". "));
+            int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2, 1st goblin room.".Split(". "));
 
             //If player choose so return to starting room
-            if (room3_playerChoice1 == 2)
+            if (playerChoice1 == 2)
             {
                 TextRender.Render("");
                 TextRender.Render("You choose to retreat.");
@@ -37,9 +37,9 @@ partial class Room_3 : RoomBase
             TextRender.Render("Room 3", sameLine: true, color: Color.White);
             TextRender.Render(", the second goblin room");
         }
-        int room3_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Go to the new path.. Return to room 2, the first goblin room.".Split(". "));
+        int playerChoice2 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Go to the new path.. Return to room 2, the first goblin room.".Split(". "));
 
-        switch (room3_playerChoice2)
+        switch (playerChoice2)
         {
             case 1:
                 TextRender.Render("");

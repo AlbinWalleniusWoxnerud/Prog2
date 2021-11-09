@@ -14,7 +14,7 @@ class Program : Methods
         while (true)
         {
             //Create a TextRender.Table with the specified header and alternatives
-            int input = TextRender.Table(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
+            int input = TextRender.TableOfOptions(header: "Main menu:", alternatives: "Play game. Settings. End program".Split(". "));
 
             // Depending on input give different results
             switch (input)

@@ -1,13 +1,20 @@
 namespace Text;
 public static class TextRender
 {
-    public static void Render(string text, bool sameLine = false, Color color = Color.Magenta, int delay = 0, int speed = 0)
+    /// <summary>
+    /// Replacement for C# innate Console.WriteLine
+    /// </summary>
+    /// <param name="text">Text to print</param>
+    /// <param name="sameLine">Do not end text with \n</param>
+    /// <param name="color">Color of text</param>
+    /// <param name="delay">Delay until next patch of text is printed in milliseconds</param>
+    /// <param name="speed">Speed of which each individual letter is printed in milliseconds</param>
+    public static void Render(string text, bool sameLine = false, Color color = Color.Magenta, int delay = 0, int speed = 30)
     {
         //If player changed settings change them here, because otherwise it will cause a compile time error
         color = color != Color.Magenta ? color : TextColor;
         delay = delay == 0 ? delay : Delay;
         speed = speed == 30 ? speed : Speed;
-
 
         Console.ForegroundColor = (System.ConsoleColor)color;
         foreach (char letter in text)
@@ -21,8 +28,40 @@ public static class TextRender
         Console.WriteLine();
     }
 
-    //A method that creates a table with specific alternatives
-    public static int Table(string header, string[] alternatives)
+    /// <summary>
+    /// Variable used to permanently change the delay of printed text
+    /// </summary>
+    public static int Delay
+    {
+        get;
+        set;
+    } = 0;
+
+    /// <summary>
+    /// Variable used to permanently change the speed of printed text
+    /// </summary>
+    public static int Speed
+    {
+        get;
+        set;
+    } = 30;
+
+    /// <summary>
+    /// Variable used to permanently change the color of printed text
+    /// </summary>
+    public static Color TextColor
+    {
+        get;
+        set;
+    } = Color.Magenta;
+
+    /// <summary>
+    /// A method that creates a table of options 
+    /// </summary>
+    /// <param name="header">The header of the table of options. Ex. If the player is presented with a choice the header would be: "Do you?"</param>
+    /// <param name="alternatives">The options given to the player. Ex. "Yes", "No". Must be entered as an array of strings</param>
+    /// <returns></returns>
+    public static int TableOfOptions(string header, string[] alternatives)
     {
         //Prints out the table with alternatives
         TextRender.Render($"\n{header}");
@@ -31,13 +70,21 @@ public static class TextRender
             TextRender.Render($"{i + 1}. {alternatives[i]}");
         }
 
-        //Get an input corresponding to one the 3 alternatives given through the GetInCorrectRange() method, see GetInCorrectRange() for further info
+        //Returns a nullable integer between in the specified range
         int? userInput = GetInCorrectRange(1, alternatives.Length);
+        //If the value evaluates to null exit the program
         if (userInput == null) System.Environment.Exit(0);
         return (int)userInput;
     }
 
-    //Method to get an integer in a certain range, also check or 'quit'
+    /// <summary>
+    /// Returns an integer between the specified range.
+    /// The method reads the console for player input and makes sure the input is an integer in the specified range, if it is return it
+    /// Method checks for "quit" which will return null
+    /// </summary>
+    /// <param name="lowerRange"></param>
+    /// <param name="upperRange"></param>
+    /// <returns></returns>
     private static int? GetInCorrectRange(int lowerRange, int upperRange)
     {
         //Init vars
@@ -54,6 +101,8 @@ public static class TextRender
             while (!isInt)
             {
                 string rawUserInput = Console.ReadLine();
+
+                //If player inputted quit return null
                 if (rawUserInput == "quit") return null;
                 isInt = int.TryParse(rawUserInput, out userInput);
 
@@ -82,40 +131,4 @@ public static class TextRender
         return userInput;
     }
 
-    public static int Delay
-    {
-        get;
-        set;
-    }
-
-    public static int Speed
-    {
-        get;
-        set;
-    }
-
-    public static Color TextColor
-    {
-        get;
-        set;
-    } = Color.Magenta;
-}
-public enum Color : byte
-{
-    Black = 0,
-    DarkBlue = 1,
-    DarkGreen = 2,
-    DarkCyan = 3,
-    DarkRed = 4,
-    DarkMagenta = 5,
-    DarkYellow = 6,
-    Gray = 7,
-    DarkGray = 8,
-    Blue = 9,
-    Green = 10,
-    Cyan = 11,
-    Red = 12,
-    Magenta = 13,
-    Yellow = 14,
-    White = 15
 }

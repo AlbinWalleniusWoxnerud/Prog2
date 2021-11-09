@@ -1,7 +1,7 @@
 namespace Rooms;
 partial class Room_7 : RoomBase
 {
-    public void Dialog1()
+    private void Dialog1()
     {
         TextRender.Render("You explore the path and end up in another dark room with the marking: ", sameLine: true);
         TextRender.Render("Room 3", sameLine: true, color: Color.White);
@@ -16,7 +16,7 @@ partial class Room_7 : RoomBase
         TextRender.Render("Hobgoblin", sameLine: true, color: Color.DarkGreen);
         TextRender.Render(".");
     }
-    public void Dialog2()
+    private void Dialog2()
     {
         TextRender.Render("After killing the ", sameLine: true);
         TextRender.Render("Hobgoblin", sameLine: true, color: Color.DarkGreen);
@@ -24,7 +24,7 @@ partial class Room_7 : RoomBase
         TextRender.Render("meat", sameLine: true, color: Color.Red);
         TextRender.Render(" which looks supremely succulent.");
     }
-    public void Dialog3()
+    private void Dialog3()
     {
         TextRender.Render("");
         TextRender.Render("You search around the rest of the room and find a ", sameLine: true);

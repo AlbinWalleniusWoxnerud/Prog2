@@ -27,10 +27,10 @@ partial class Room_5 : RoomBase
             else
             {
                 TextRender.Render("You notice that it seems to have been attracted by the remnants of the Hobgoblin meat which you ate.");
-                int room5_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight it.. Retreat to room 4, chest room.".Split(". "));
+                int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Fight it.. Retreat to room 4, chest room.".Split(". "));
 
                 //If player choose to return
-                if (room5_playerChoice1 == 2)
+                if (playerChoice1 == 2)
                 {
                     TextRender.Render("");
                     TextRender.Render("You choose to retreat to room 4, chest room.");
@@ -43,7 +43,6 @@ partial class Room_5 : RoomBase
                 if (player._alive == false) return;
 
                 TextRender.Render("After deafeating the wolf you decide to examine the rest of the room.");
-
             }
 
             if (!player.hasTrueKey)
@@ -65,9 +64,9 @@ partial class Room_5 : RoomBase
             TextRender.Render("Room 5", sameLine: true, color: Color.White);
             TextRender.Render(", the wolf room");
         }
-        int room5_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Go to the new path.. Return to room 4, the chest room.".Split(". "));
+        int playerChoice2 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Go to the new path.. Return to room 4, the chest room.".Split(". "));
 
-        switch (room5_playerChoice2)
+        switch (playerChoice2)
         {
             case 1:
                 TextRender.Render("");

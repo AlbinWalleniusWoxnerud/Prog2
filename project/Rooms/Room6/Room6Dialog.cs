@@ -1,7 +1,7 @@
 namespace Rooms;
 partial class Room_6 : RoomBase
 {
-    public void Dialog1()
+    private void Dialog1()
     {
         TextRender.Render("You explore the new path and end up in a room lit with an eery red light.");
         TextRender.Render("");
@@ -11,7 +11,7 @@ partial class Room_6 : RoomBase
         TextRender.Render("");
         TextRender.Render("Branch of the Sinner: Take 10 damage to gain 5 hp");
     }
-    public void Dialog2()
+    private void Dialog2()
     {
         TextRender.Render("After leaving that cursed thing you find a note.");
         TextRender.Render("");

@@ -18,9 +18,9 @@ partial class Room_6 : RoomBase
             bool useBranchOfTheSinner = true;
             while (useBranchOfTheSinner)
             {
-                int room6_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Use the branch.. Leave the cursed thing and examine the rest of the room.".Split(". "));
+                int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Use the branch.. Leave the cursed thing and examine the rest of the room.".Split(". "));
 
-                switch (room6_playerChoice1)
+                switch (playerChoice1)
                 {
                     case 1:
                         TextRender.Render("");
@@ -68,9 +68,9 @@ partial class Room_6 : RoomBase
             TextRender.Render("eery red", sameLine: true, color: Color.Red);
             TextRender.Render(" room.");
         }
-        int room6_playerChoice2 = TextRender.Table(header: "Return ", alternatives: "Return to room 5, the wolf room.".Split(". "));
+        int playerChoice2 = TextRender.TableOfOptions(header: "Return ", alternatives: "Return to room 5, the wolf room.".Split(". "));
 
-        switch (room6_playerChoice2)
+        switch (playerChoice2)
         {
             case 1:
                 TextRender.Render("");

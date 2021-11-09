@@ -2,23 +2,32 @@ namespace Library.Battle;
 
 partial class Fight
 {
-    private static void CalculateBattleResult<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
+    /// <summary>
+    /// Calculates the outcome of current attack/defense.
+    /// Passed entities must inherit from EntityBase.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="U"></typeparam>
+    /// <param name="attacker">Pass the entity that is attacking</param>
+    /// <param name="defender">Pass the entity that is defending</param>
+    /// <param name="IsPlayerDefending">Is the player defending when attacked</param>
+    private static void CalculateOutcome<T, U>(T attacker, U defender, bool IsPlayerDefending = false) where T : EntityBase where U : EntityBase
     {
+        //Local variable damage to store temporary value
         double damage = attacker.attack * defender.defense;
         TextRender.Render("Damage dealt reduced by ", sameLine: true);
         TextRender.Render($"{Math.Round((1 - defender.defense) * 100)}%", sameLine: true, color: Text.Color.White);
         TextRender.Render($" due to {defender.entityType}'s defense.");
 
-
         //If attacker crits 2x the damage
-        if ((100 - attacker.crit) <= new Random().Next(1, 100))
+        if (/* (100 - attacker.crit) <= new Random().Next(1, 100) */true)
         {
             TextRender.Render($"{attacker.entityType} crit!", color: Text.Color.White);
             damage *= 2;
         }
 
-
-        if (IsPlayerDefending)
+        //Monsters always defend, player only defends when choosing to do so
+        if (defender is EnemyBase || IsPlayerDefending)
         {
             if ((defender.shield - damage) >= 0)
             {
@@ -33,9 +42,9 @@ partial class Fight
             }
 
             //If the attack destoys the shield
-            else if ((defender.shield - damage) < 0 && defender.shield > 0)
+            else if ((defender.shield - damage) < 0 || defender.shield > 0)
             {
-                TextRender.Render($"{damage - defender.shield}", sameLine: true, color: Text.Color.White);
+                TextRender.Render($"{defender.shield}", sameLine: true, color: Text.Color.White);
                 TextRender.Render($" damage blocked by {defender.entityType}'s shield.");
 
                 //Remaining damage after shield blocked some of it
@@ -53,10 +62,22 @@ partial class Fight
                 TextRender.Render($"{defender.health}", sameLine: true, color: Text.Color.White);
                 TextRender.Render(" HP remaining.");
             }
+            else
+            {
+                DefenderTakesDirectDamage();
+            }
         }
 
-        //Enemies shield is destroyed so deal damage directly to defender hp
+        //The player did not chose to defend
         else
+        {
+            DefenderTakesDirectDamage();
+        }
+
+        TextRender.Render("");
+
+        //Defender takes damage directly to HP
+        void DefenderTakesDirectDamage()
         {
             TextRender.Render($"{(int)damage}", sameLine: true, color: Text.Color.White);
             TextRender.Render($" was dealt directly to {defender.entityType} HP.");
@@ -68,8 +89,7 @@ partial class Fight
             TextRender.Render(" HP remaining.");
         }
 
-        TextRender.Render("");
-
+        //Local method to check if the defender survived the attack
         static bool isDefenderAliveAfterDamage<O>(O defender, double damage) where O : EntityBase
         {
             defender.TakeDamage(damage);
@@ -78,6 +98,12 @@ partial class Fight
         }
     }
 
+    /// <summary>
+    /// Post combat check who won and print message depending on winner
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="enemy"></param>
+    /// <returns></returns>
     public static bool CheckIfWinner(EntityBase player, EntityBase enemy)
     {
         if (enemy._alive == false)
@@ -89,7 +115,7 @@ partial class Fight
         }
         else
         {
-            if (enemy.entityType == EntityType.Dragonling)
+            if (enemy.entityType is EntityType.Dragonling)
             {
                 TextRender.Render("");
                 TextRender.Render("You lost the battle!", color: Text.Color.DarkRed);
@@ -103,6 +129,7 @@ partial class Fight
         }
     }
 
+    //On entity death one of the two will trigger, "isCombatansAlive" will equal false which will end the combat
     public static void player_PlayerDeathEventHandler(Object sender, PlayerDeathEventArgs e)
     {
         if ((Boolean)sender.GetType().GetProperty("finalFight").GetValue(sender))

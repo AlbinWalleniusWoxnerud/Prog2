@@ -1,7 +1,7 @@
 namespace Rooms;
 partial class Room_9 : RoomBase
 {
-    public void Dialog1()
+    private void Dialog1()
     {
         TextRender.Render("As you're entering the boss room, the door slams shut, preventing any escape.");
         TextRender.Render("Preparing yourself for the final battle you rush forward to face the ", sameLine: true);
@@ -15,7 +15,7 @@ partial class Room_9 : RoomBase
         TextRender.Render(" rests.");
         TextRender.Render("Weak mortal, YOU DARE FACE ME!");
     }
-    public void Dialog2()
+    private void Dialog2()
     {
         TextRender.Render("Ahahahhahahahahaha, foolish insect.");
         TextRender.Render("To think you thought you could defeat me.");
@@ -26,7 +26,7 @@ partial class Room_9 : RoomBase
         TextRender.Render("Smedd the Terrible", sameLine: true, color: Color.Green);
         TextRender.Render(".");
     }
-    public void Dialog3()
+    private void Dialog3()
     {
         TextRender.Render("As death approches you're suddenly enveloped by the smell of bacon.");
         TextRender.Render("As a ", sameLine: true);

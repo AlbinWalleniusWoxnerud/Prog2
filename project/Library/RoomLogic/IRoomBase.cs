@@ -1,5 +1,7 @@
 namespace Library;
-//Room logic, or rather room eventflags 
+/// <summary>
+/// Interface for room logic
+/// </summary>
 internal interface IRoomBase
 {
     void RoomBase(Player player, RoomFlags room, CurrentRun currentRun)

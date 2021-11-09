@@ -1,5 +1,6 @@
 namespace Library.Entities;
-//Enemies, inherit stats from EntityBase class, every enemy has different default initialization stats
+
+//Enemies, inherit stats and onDeath method from EntityBase class
 public abstract class EnemyBase : EntityBase
 {
     public event EventHandler<EnemyDeathEventArgs> EnemyDeathEventHandler;
@@ -14,12 +15,17 @@ public abstract class EnemyBase : EntityBase
         this._alive = true;
     }
 
+    //Override baseclass implementation with an enemy specific variant
     private protected override void EntityDeath()
     {
         OnEnemyDeath(new EnemyDeathEventArgs(this.entityType));
     }
 
-
+    /// <summary>
+    /// Invoked on enemy death.
+    /// Checks if subscriber is still subscribed in which case it will invoke the subscriber method
+    /// </summary>
+    /// <param name="e"></param>
     private void OnEnemyDeath(EnemyDeathEventArgs e)
     {
         EventHandler<EnemyDeathEventArgs> handler = EnemyDeathEventHandler;

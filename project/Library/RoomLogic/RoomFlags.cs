@@ -1,5 +1,5 @@
 namespace Library;
-//Room logic, or rather room eventflags 
+//Room eventflags 
 internal class RoomFlags : IRoomFlags
 {
     public bool clear1

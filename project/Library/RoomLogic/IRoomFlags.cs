@@ -1,5 +1,8 @@
 namespace Library;
-//Room logic, or rather room eventflags 
+
+/// <summary>
+///Interface for room eventflags 
+/// </summary>
 public interface IRoomFlags
 {
     bool clear1 { get; set; }

@@ -26,9 +26,9 @@ partial class Room_4 : RoomBase
             if (!player.hasChestKey)
             {
                 TextRender.Render("");
-                int room4_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Go to the new path.. Return to room 3, the second goblin room.".Split(". "));
+                int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Go to the new path.. Return to room 3, the second goblin room.".Split(". "));
 
-                switch (room4_playerChoice1)
+                switch (playerChoice1)
                 {
                     case 1:
                         TextRender.Render("");
@@ -47,9 +47,9 @@ partial class Room_4 : RoomBase
             if (player.hasChestKey && player.brokenChestKey && !player.hasBossKey)
             {
                 TextRender.Render("");
-                int room4_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Go to the new path.. Try to use the broken key to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
+                int playerChoice2 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Go to the new path.. Try to use the broken key to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
 
-                switch (room4_playerChoice2)
+                switch (playerChoice2)
                 {
                     case 1:
                         TextRender.Render("");
@@ -84,9 +84,9 @@ partial class Room_4 : RoomBase
             if (player.hasChestKey && !player.brokenChestKey && !player.hasBossKey)
             {
                 TextRender.Render("");
-                int room4_playerChoice3 = TextRender.Table(header: "Do you: ", alternatives: "Go to the new path.. Try to use the key from the shrine to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
+                int playerChoice3 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Go to the new path.. Try to use the key from the shrine to open the Chest.. Return to room 3, the second goblin room.".Split(". "));
 
-                switch (room4_playerChoice3)
+                switch (playerChoice3)
                 {
                     case 1:
                         TextRender.Render("");
@@ -114,9 +114,9 @@ partial class Room_4 : RoomBase
 
             player.hasBossKey = true;
 
-            int room4_playerChoice4 = TextRender.Table(header: "Do you: ", alternatives: "Drink the unknown potion.. Don't drink the potentially poisonous potion and try to use the boss key..".Split(". "));
+            int playerChoice4 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Drink the unknown potion.. Don't drink the potentially poisonous potion and try to use the boss key..".Split(". "));
 
-            switch (room4_playerChoice4)
+            switch (playerChoice4)
             {
                 case 1:
                     TextRender.Render("");
@@ -147,9 +147,9 @@ partial class Room_4 : RoomBase
         {
             if (player.hasBossKey)
             {
-                int room4_playerChoice5 = TextRender.Table(header: "Do you: ", alternatives: "Use the BOSS key on the door with the letters 'BOSS'.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
+                int playerChoice5 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Use the BOSS key on the door with the letters 'BOSS'.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
 
-                switch (room4_playerChoice5)
+                switch (playerChoice5)
                 {
                     case 1:
                         TextRender.Render("");
@@ -173,9 +173,9 @@ partial class Room_4 : RoomBase
         }
 
 
-        int room4_playerChoice6 = TextRender.Table(header: "What do you do: ", alternatives: "Enter the boss room.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
+        int playerChoice6 = TextRender.TableOfOptions(header: "What do you do: ", alternatives: "Enter the boss room.. Go to the new path.. Return to room 3, second goblin room.".Split(". "));
 
-        switch (room4_playerChoice6)
+        switch (playerChoice6)
         {
             case 1:
                 TextRender.Render("");

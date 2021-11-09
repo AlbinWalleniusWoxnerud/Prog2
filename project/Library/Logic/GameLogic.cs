@@ -21,22 +21,14 @@ public class EnemyDeathEventArgs : EventArgs
 }
 internal class Methods
 {
-    //Self explanatory
-    // internal static bool IsGameOver(Player player, CurrentRun run)
-    // {
-    //     //The game is over if the player is dead or if the maze is conquered
-    //     if (player._alive == false || player.health <= 0)
-    //     {
-    //         return true;
-    //     }
-    //     if (run.conquered == true) return true;
-    //     return false;
-    // }
-
+    /// <summary>
+    /// Invokes the room which the player should be in/is going to according to the "currentRun" value
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="rooms">List of rooms specific for the current run</param>
+    /// <param name="currentRun">The currentRun containing information about the current run</param>
     internal static void InitRoom(Player player, RoomFlags[] rooms, CurrentRun currentRun)
     {
-        //Really just a switch made into a method to make the code less cluttered
-        //Based on current room get that room
         switch (currentRun.currentRoom)
         {
             case 1:

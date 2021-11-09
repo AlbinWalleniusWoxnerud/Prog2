@@ -11,10 +11,10 @@ partial class Room_8 : RoomBase
             //Usual dialog with skip
             Dialog1();
 
-            int room8_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Praise it.. Don' praise it.".Split(". "));
+            int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Praise it.. Don' praise it.".Split(". "));
 
             //If player choose so return to room 7
-            if (room8_playerChoice1 == 2)
+            if (playerChoice1 == 2)
             {
                 TextRender.Render("");
                 TextRender.Render("You choose not to praise it.");
@@ -53,9 +53,9 @@ partial class Room_8 : RoomBase
 
         if (room.clear1 && !room.clear2)
         {
-            int room8_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Examine the rest of the shrine.. Return to room 7, Hobgoblin room.".Split(". "));
+            int playerChoice2 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Examine the rest of the shrine.. Return to room 7, Hobgoblin room.".Split(". "));
 
-            switch (room8_playerChoice2)
+            switch (playerChoice2)
             {
                 case 1:
                     TextRender.Render("");
@@ -94,7 +94,7 @@ partial class Room_8 : RoomBase
             TextRender.Render("There is nothing else in the shrine.");
 
             //No need to do anything special with the choice since there is only one alternative
-            int room8_playerChoice3 = TextRender.Table(header: "Return to room 7, Hobgoblin room: ", alternatives: "Yes".Split(". "));
+            int room8_playerChoice3 = TextRender.TableOfOptions(header: "Return to room 7, Hobgoblin room: ", alternatives: "Yes".Split(". "));
 
             currentRun.currentRoom = 7;
             room.specialInteraction = true;

@@ -1,7 +1,7 @@
 namespace Rooms;
 partial class Room_3 : RoomBase
 {
-    public void Dialog1()
+    private void Dialog1()
     {
         TextRender.Render("You explore the path to the left and end up in another dark room with another marking.");
         TextRender.Render("");
@@ -22,7 +22,7 @@ partial class Room_3 : RoomBase
         TextRender.Render(".");
         TextRender.Render("");
     }
-    public void Dialog2()
+    private void Dialog2()
     {
         TextRender.Render("After killing the ", sameLine: true);
         TextRender.Render("Goblin", sameLine: true, color: Color.Green);

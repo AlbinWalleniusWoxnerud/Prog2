@@ -1,5 +1,9 @@
 namespace Library.Entities
 {
+    /// <summary>
+    /// Contains the different monsters and their default initializations
+    /// Initializations is done trough invoking the baseclass constructor
+    /// </summary>
     namespace Enemies
     {
         internal class Goblin : EnemyBase

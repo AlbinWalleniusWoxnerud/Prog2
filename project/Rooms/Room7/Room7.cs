@@ -11,10 +11,10 @@ partial class Room_7 : RoomBase
             //Usual dialog with skip
             Dialog1();
 
-            int room7_playerChoice1 = TextRender.Table(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2".Split(". "));
+            int playerChoice1 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Fight it.. Retreat to room 2".Split(". "));
 
             //If player choose so return to starting room
-            if (room7_playerChoice1 == 2)
+            if (playerChoice1 == 2)
             {
                 TextRender.Render("");
                 TextRender.Render("You choose to retreat.");
@@ -28,9 +28,9 @@ partial class Room_7 : RoomBase
 
             Dialog2();
 
-            int room7_playerChoice2 = TextRender.Table(header: "Do you: ", alternatives: "Eat it.. Don't eat the meat you just took from a Hobgoblins body.".Split(". "));
+            int playerChoice2 = TextRender.TableOfOptions(header: "Do you: ", alternatives: "Eat it.. Don't eat the meat you just took from a Hobgoblins body.".Split(". "));
 
-            switch (room7_playerChoice2)
+            switch (playerChoice2)
             {
                 case 1:
                     TextRender.Render("");
@@ -67,9 +67,9 @@ partial class Room_7 : RoomBase
             TextRender.Render("You return to the room marked: ", sameLine: true);
             TextRender.Render("Room 7", color: Color.White);
         }
-        int room7_playerChoice3 = TextRender.Table(header: "What do you do? ", alternatives: "Go to the even deeper path.. Use the machine.. Return to room 2.".Split(". "));
+        int layerChoice3 = TextRender.TableOfOptions(header: "What do you do? ", alternatives: "Go to the even deeper path.. Use the machine.. Return to room 2.".Split(". "));
 
-        switch (room7_playerChoice3)
+        switch (layerChoice3)
         {
             case 1:
                 TextRender.Render("");
@@ -95,9 +95,9 @@ partial class Room_7 : RoomBase
         {
             SpecialEncounters.Machine.MachineActivationWithoutPassword();
 
-            int choice = TextRender.Table(header: "Do you want to search again?: ", alternatives: "Yes.. No.".Split(". "));
+            int playerChoice4 = TextRender.TableOfOptions(header: "Do you want to search again?: ", alternatives: "Yes.. No.".Split(". "));
 
-            switch (choice)
+            switch (playerChoice4)
             {
                 case 1:
                     break;

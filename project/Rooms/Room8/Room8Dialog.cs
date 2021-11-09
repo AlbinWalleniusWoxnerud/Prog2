@@ -1,7 +1,7 @@
 namespace Rooms;
 partial class Room_8 : RoomBase
 {
-    public void Dialog1()
+    private void Dialog1()
     {
         TextRender.Render("You explore the deep path and come to massive gate");
         TextRender.Render("It says: ");
@@ -24,7 +24,7 @@ partial class Room_8 : RoomBase
         TextRender.Render("...");
         TextRender.Render("");
     }
-    public void Dialog2()
+    private void Dialog2()
     {
         TextRender.Render("You choose to praise the statue.");
         TextRender.Render("");
@@ -35,7 +35,7 @@ partial class Room_8 : RoomBase
         TextRender.Render("Heal ", sameLine: true);
         TextRender.Render("10 HP", sameLine: true, color: Color.White);
     }
-    public void Dialog3()
+    private void Dialog3()
     {
         TextRender.Render("");
         TextRender.Render("Gained Buff: ", sameLine: true);
@@ -49,7 +49,7 @@ partial class Room_8 : RoomBase
         TextRender.Render($"{player.attack}", sameLine: true, color: Color.White);
         TextRender.Render(" current attack.");
     }
-    public void Dialog4()
+    private void Dialog4()
     {
         TextRender.Render("");
         TextRender.Render("After a while the ", sameLine: true);

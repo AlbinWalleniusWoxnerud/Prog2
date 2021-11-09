@@ -1,5 +1,5 @@
 @startuml
 class Machine {
-    + {static} <<async>> MachineActivationWithoutPassword() : Task
+    + {static} <<async>> MachineActivationWithoutPassword() : void
 }
 @enduml
