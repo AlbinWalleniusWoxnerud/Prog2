@@ -1,0 +1,413 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="919" preserveAspectRatio="none" style="width:6154px;height:919px;background:#fff" width="6154">
+  <defs>
+    <filter height="300%" id="a" width="300%" x="-1" y="-1">
+      <feGaussianBlur result="blurOut" stdDeviation="2"/>
+      <feColorMatrix in="blurOut" result="blurOut2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+      <feOffset dx="4" dy="4" in="blurOut2" result="blurOut3"/>
+      <feBlend in="SourceGraphic" in2="blurOut3"/>
+    </filter>
+  </defs>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1220.5 377.5h80v61.836h-80z"/>
+  <circle cx="1235.5" cy="393.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1238.266 389.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="1249.5" y="398.41">Program</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1221.5 409.5h78M1221.5 417.5h78"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="59" x="1226.5" y="432.919">Main() : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1221 117.5h79v48h-79z"/>
+  <circle cx="1236" cy="133.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1238.766 129.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.766 1.094-.625 2.329-.625.734 0 1.374.172.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="47" x="1250" y="138.41">Methods</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1222 149.5h77M1222 157.5h77"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M417 7h93v269.375h-93z"/>
+  <circle cx="445.95" cy="23" fill="#EB937F" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M444.81 23.797v2.5h4.327v-.922q0-.61.235-.875.25-.266.625-.266t.61.266q.234.266.234.875V28h-8q-.625 0-.891-.234-.25-.235-.25-.625 0-.375.266-.61.265-.234.875-.234h.265V19.64h-.265q-.625 0-.891-.235-.25-.234-.25-.625 0-.375.25-.61.266-.233.89-.233h7.626v2.593q0 .61-.235.875-.219.25-.61.25-.374 0-.608-.25-.235-.265-.235-.875v-.89h-3.969v2.453h1.485q0-.657.125-.844.265-.406.734-.406.375 0 .61.265.234.25.234.86v1.968q0 .547-.125.735-.266.39-.719.39-.469 0-.734-.406-.125-.187-.125-.86h-1.485Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="30" x="463.05" y="27.91">Color</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M418 39h91"/>
+  <text font-family="sans-serif" font-size="11" textLength="44" x="423" y="54.419">Black= 0,</text>
+  <text font-family="sans-serif" font-size="11" textLength="61" x="423" y="68.255">DarkBlue= 1,</text>
+  <text font-family="sans-serif" font-size="11" textLength="70" x="423" y="82.091">DarkGreen= 2,</text>
+  <text font-family="sans-serif" font-size="11" textLength="65" x="423" y="95.927">DarkCyan= 3,</text>
+  <text font-family="sans-serif" font-size="11" textLength="59" x="423" y="109.763">DarkRed= 4,</text>
+  <text font-family="sans-serif" font-size="11" textLength="81" x="423" y="123.599">DarkMagenta= 5,</text>
+  <text font-family="sans-serif" font-size="11" textLength="74" x="423" y="137.435">DarkYellow= 6,</text>
+  <text font-family="sans-serif" font-size="11" textLength="42" x="423" y="151.27">Gray= 7,</text>
+  <text font-family="sans-serif" font-size="11" textLength="64" x="423" y="165.106">DarkGray= 8,</text>
+  <text font-family="sans-serif" font-size="11" textLength="39" x="423" y="178.942">Blue= 9,</text>
+  <text font-family="sans-serif" font-size="11" textLength="54" x="423" y="192.778">Green= 10,</text>
+  <text font-family="sans-serif" font-size="11" textLength="49" x="423" y="206.614">Cyan= 11,</text>
+  <text font-family="sans-serif" font-size="11" textLength="43" x="423" y="220.45">Red= 12,</text>
+  <text font-family="sans-serif" font-size="11" textLength="65" x="423" y="234.286">Magenta= 13,</text>
+  <text font-family="sans-serif" font-size="11" textLength="58" x="423" y="248.122">Yellow= 14,</text>
+  <text font-family="sans-serif" font-size="11" textLength="51" x="423" y="261.958">White= 15,</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M418 268.375h91"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M7 85.5h375v111.531H7z"/>
+  <circle cx="158.75" cy="105.594" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M161.516 101.469q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.329-.625.328-1.125 1.078-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.579-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.329.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="42" x="189.75" y="102.957">«static»</text>
+  <text font-family="sans-serif" font-size="12" textLength="63" x="179.25" y="118.051">TextRender</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M8 125.688h373"/>
+  <circle cx="18" cy="136.688" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="125" x="27" y="141.106">Delay : int «get» «set» = 0</text>
+  <circle cx="18" cy="150.523" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="135" x="27" y="154.942">Speed : int «get» «set» = 30</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M8 161.359h373"/>
+  <circle cx="18" cy="172.359" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="349" x="27" y="176.778">Render(text:string, sameLine:bool, color:Color, delay:int, speed:int) : void</text>
+  <circle cx="18" cy="186.195" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="265" x="27" y="190.614">TableOfOptions(header:string, alternatives:string[]) : int</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1335.5 106.5h126v70.023h-126z"/>
+  <circle cx="1368.05" cy="126.594" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1370.816 122.469q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.329-.625.328-1.125 1.078-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.329.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="42" x="1392.45" y="123.957">«static»</text>
+  <text font-family="sans-serif" font-size="12" textLength="55" x="1385.95" y="139.051">APIHelper</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1336.5 146.688h124M1336.5 154.688h124"/>
+  <circle cx="1346.5" cy="165.688" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="100" x="1355.5" y="170.106">InitializeClient() : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1355.5 384.5h86v48h-86z"/>
+  <circle cx="1370.5" cy="400.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1373.266 396.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="54" x="1384.5" y="405.41">HttpClient</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1356.5 416.5h84M1356.5 424.5h84"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M545.5 83h186v117.18h-186z"/>
+  <circle cx="566.8" cy="99" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M569.566 94.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.766 1.094-.624 2.328-.624.735 0 1.375.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="140" x="582.2" y="103.91">APIMovieResponseModel</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M546.5 115h184"/>
+  <circle cx="556.5" cy="126" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="123" x="565.5" y="130.419">Name : string «get» «set»</text>
+  <circle cx="556.5" cy="139.836" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="144" x="565.5" y="144.255">Language : string «get» «set»</text>
+  <circle cx="556.5" cy="153.672" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="160" x="565.5" y="158.091">AverageRuntime : int «get» «set»</text>
+  <circle cx="556.5" cy="167.508" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="127" x="565.5" y="171.927">Status : string «get» «set»</text>
+  <circle cx="556.5" cy="181.344" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="144" x="565.5" y="185.763">Premiered : string «get» «set»</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M546.5 192.18h184"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M767 85.5h419v111.531H767z"/>
+  <circle cx="950.25" cy="105.594" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M953.016 101.469q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.329-.625.328-1.125 1.078-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.579-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.329.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="968.75" y="102.957">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="27" x="979.25" y="118.051">Fight</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M768 125.688h417M768 133.688h417"/>
+  <circle cx="778" cy="144.688" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="192" x="787" y="149.106">Fight(player:Player, enemy:EnemyBase)</text>
+  <circle cx="778" cy="158.523" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="283" x="787" y="162.942">CheckIfWinner(player:EntityBase, enemy:EntityBase) : bool</text>
+  <circle cx="778" cy="172.359" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="387" x="787" y="176.778">player_PlayerDeathEventHandler(sender:Object, e:PlayerDeathEventArgs) : void</text>
+  <circle cx="778" cy="186.195" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="393" x="787" y="190.614">enemy_EnemyDeathEventHandler(sender:Object, e:EnemyDeathEventArgs) : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1290.5 857h68v48h-68z"/>
+  <circle cx="1305.5" cy="873" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1308.266 868.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="36" x="1319.5" y="877.91">Goblin</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1291.5 889h66M1291.5 897h66"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1394 857h91v48h-91z"/>
+  <circle cx="1409" cy="873" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1411.766 868.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="59" x="1423" y="877.91">HobGoblin</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1395 889h89M1395 897h89"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1520 857h93v48h-93z"/>
+  <circle cx="1535" cy="873" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1537.766 868.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="61" x="1549" y="877.91">Dragonling</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1521 889h91M1521 897h91"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1648.5 857h56v48h-56z"/>
+  <circle cx="1663.5" cy="873" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1666.266 868.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="24" x="1677.5" y="877.91">Wolf</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1649.5 889h54M1649.5 897h54"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1308.5 638h388v61.836h-388z"/>
+  <circle cx="1464.75" cy="654" fill="#A9DCDF" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1466.938 655.766h-4.141l-.422 1.03h.422q.61 0 .875.235t.265.625q0 .375-.265.61-.266.234-.875.234h-2.297q-.61 0-.86-.234-.265-.235-.265-.625 0-.375.281-.61.266-.25.89-.234l2.673-6.656h-1.11q-.609 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.234.875-.234h3.672l3.39 8.36q.595 0 .782.14.39.266.39.72 0 .374-.265.609-.25.234-.86.234h-2.296q-.61 0-.875-.234-.266-.235-.266-.625 0-.375.266-.61.265-.234.875-.234h.422l-.407-1.031Zm-.72-1.703-1.359-3.375-1.375 3.375h2.735Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="67" x="1485.25" y="658.91">EnemyBase</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1309.5 670h386"/>
+  <circle cx="1319.5" cy="681" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="362" x="1328.5" y="685.419">«event» EnemyDeathEventHandler : EventHandler&lt;EnemyDeathEventArgs&gt;</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1309.5 691.836h386"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1477 336h241v144.852h-241z"/>
+  <circle cx="1564.25" cy="352" fill="#A9DCDF" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1566.438 353.766h-4.141l-.422 1.03h.422q.61 0 .875.235t.265.625q0 .375-.265.61-.266.234-.875.234H1560q-.61 0-.86-.234-.265-.235-.265-.625 0-.375.281-.61.266-.25.89-.234l2.673-6.656h-1.11q-.609 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.233.875-.233h3.672l3.39 8.359q.595 0 .782.14.39.266.39.72 0 .374-.265.609-.25.234-.86.234h-2.296q-.61 0-.875-.234-.266-.235-.266-.625 0-.375.266-.61.265-.234.875-.234h.422l-.407-1.031Zm-.72-1.704-1.359-3.375-1.375 3.375h2.735Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="58" x="1584.75" y="356.91">EntityBase</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1478 368h239"/>
+  <circle cx="1488" cy="379" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="79" x="1497" y="383.419">health : int «get»</text>
+  <circle cx="1488" cy="392.836" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="108" x="1497" y="397.255">shield : int «get» «set»</text>
+  <circle cx="1488" cy="406.672" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="130" x="1497" y="411.091">attack : double «get» «set»</text>
+  <circle cx="1488" cy="420.508" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="141" x="1497" y="424.927">defense : double «get» «set»</text>
+  <circle cx="1488" cy="434.344" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="95" x="1497" y="438.763">crit : int «get» «set»</text>
+  <circle cx="1488" cy="448.18" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="87" x="1497" y="452.599">_alive : bool «get»</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1478 459.016h239"/>
+  <circle cx="1488" cy="470.016" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="215" x="1497" y="474.435">TakeDamage(damage:double, die:bool) : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1578 69h227v144.852h-227z"/>
+  <circle cx="1656.25" cy="85" fill="#B4A7E5" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1657.203 81.64v6.657h1.719q.61 0 .875.234.265.235.265.625 0 .375-.265.61-.266.234-.875.234h-5.14q-.61 0-.876-.234-.265-.235-.265-.625 0-.375.265-.61.266-.234.875-.234h1.719V81.64h-1.719q-.61 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.234.875-.234h5.14q.61 0 .876.235.265.234.265.61 0 .39-.265.624-.266.235-.875.235h-1.719Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="62" x="1676.75" y="89.91">IEntityBase</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1579 101h225"/>
+  <text font-family="sans-serif" font-size="11" textLength="79" x="1584" y="116.419">health : int «get»</text>
+  <text font-family="sans-serif" font-size="11" textLength="78" x="1584" y="130.255">shield : int «get»</text>
+  <text font-family="sans-serif" font-size="11" textLength="100" x="1584" y="144.091">attack : double «get»</text>
+  <text font-family="sans-serif" font-size="11" textLength="111" x="1584" y="157.927">defense : double «get»</text>
+  <text font-family="sans-serif" font-size="11" textLength="65" x="1584" y="171.763">crit : int «get»</text>
+  <text font-family="sans-serif" font-size="11" textLength="87" x="1584" y="185.599">_alive : bool «get»</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1579 192.016h225"/>
+  <text font-family="sans-serif" font-size="11" textLength="215" x="1584" y="207.435">TakeDamage(damage:double, die:bool) : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1732 603.5h87v131.016h-87z"/>
+  <circle cx="1747" cy="619.5" fill="#EB937F" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1745.86 620.297v2.5h4.328v-.922q0-.61.234-.875.25-.266.625-.266t.61.266q.234.266.234.875v2.625h-8q-.625 0-.891-.234-.25-.235-.25-.625 0-.375.266-.61.265-.234.875-.234h.265v-6.656h-.265q-.625 0-.891-.235-.25-.234-.25-.625 0-.375.25-.61.266-.234.89-.234h7.626v2.594q0 .61-.235.875-.218.25-.61.25-.374 0-.609-.25-.234-.265-.234-.875v-.89h-3.969v2.453h1.485q0-.657.125-.844.265-.406.734-.406.375 0 .61.265.234.25.234.86v1.968q0 .547-.125.735-.266.39-.719.39-.469 0-.734-.406-.125-.187-.125-.86h-1.485Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="55" x="1761" y="624.41">EntityType</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1733 635.5h85"/>
+  <text font-family="sans-serif" font-size="11" textLength="33" x="1738" y="650.919">Player,</text>
+  <text font-family="sans-serif" font-size="11" textLength="33" x="1738" y="664.755">Goblin,</text>
+  <text font-family="sans-serif" font-size="11" textLength="39" x="1738" y="678.591">Goblins,</text>
+  <text font-family="sans-serif" font-size="11" textLength="52" x="1738" y="692.427">HobGoblin,</text>
+  <text font-family="sans-serif" font-size="11" textLength="25" x="1738" y="706.263">Wolf,</text>
+  <text font-family="sans-serif" font-size="11" textLength="54" x="1738" y="720.099">Dragonling,</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1733 726.516h85"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1979.5 541h384v255.539h-384z"/>
+  <circle cx="2150.25" cy="557" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M2153.016 552.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="34" x="2170.75" y="561.91">Player</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1980.5 573h382"/>
+  <circle cx="1990.5" cy="584" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="358" x="1999.5" y="588.419">«event» PlayerDeathEventHandler : EventHandler&lt;PlayerDeathEventArgs&gt;</text>
+  <circle cx="1990.5" cy="597.836" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="129" x="1999.5" y="602.255">maxhealth : int «get» «set»</text>
+  <circle cx="1990.5" cy="611.672" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="108" x="1999.5" y="616.091">stupidity : int «get» = 0</text>
+  <circle cx="1990.5" cy="625.508" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="190" x="1999.5" y="629.927">hasChestKey : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="639.344" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="225" x="1999.5" y="643.763">subjectOfLordBacon : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="653.18" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="190" x="1999.5" y="657.599">chooseShield : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="667.016" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="166" x="1999.5" y="671.435">hasMeat : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="680.852" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="205" x="1999.5" y="685.27">brokenChestKey : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="694.688" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="187" x="1999.5" y="699.106">hasBossKey : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="708.523" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="184" x="1999.5" y="712.942">hasTrueKey : bool «get» «set» = false</text>
+  <circle cx="1990.5" cy="722.359" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="168" x="1999.5" y="726.778">finalFight : bool «get» «set» = false</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1980.5 733.195h382"/>
+  <circle cx="1990.5" cy="744.195" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="115" x="1999.5" y="748.614">PartialHeal(val:int) : void</text>
+  <circle cx="1990.5" cy="758.031" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="74" x="1999.5" y="762.45">FullHeal() : void</text>
+  <circle cx="1990.5" cy="771.867" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="70" x="1999.5" y="776.286">Revive() : void</text>
+  <circle cx="1990.5" cy="785.703" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="141" x="1999.5" y="790.122">isPlayerDeadStupidity() : bool</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M2398.5 645h96v48h-96z"/>
+  <circle cx="2413.5" cy="661" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M2416.266 656.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="64" x="2427.5" y="665.91">CurrentRun</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M2399.5 677h94M2399.5 685h94"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1824.5 377.5h154v61.836h-154z"/>
+  <circle cx="1839.5" cy="393.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1842.266 389.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="122" x="1853.5" y="398.41">PlayerDeathEventArgs</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1825.5 409.5h152M1825.5 417.5h152"/>
+  <circle cx="1835.5" cy="428.5" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="117" x="1844.5" y="432.919">PlayerDeathEventArgs()</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M2013.5 377.5h204v61.836h-204z"/>
+  <circle cx="2049.2" cy="393.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M2051.966 389.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="126" x="2067.8" y="398.41">EnemyDeathEventArgs</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M2014.5 409.5h202M2014.5 417.5h202"/>
+  <circle cx="2024.5" cy="428.5" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="178" x="2033.5" y="432.919">EnemyDeathEventArgs(e:EntityType)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1965 117.5h87v48h-87z"/>
+  <circle cx="1980" cy="133.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1982.766 129.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.766 1.094-.625 2.329-.625.734 0 1.374.172.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="55" x="1994" y="138.41">EventArgs</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1966 149.5h85M1966 157.5h85"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M1858.5 645h86v48h-86z"/>
+  <circle cx="1873.5" cy="661" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M1876.266 656.875q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="54" x="1887.5" y="665.91">DateTime</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M1859.5 677h84M1859.5 685h84"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M587.5 377.5h102v61.836h-102z"/>
+  <circle cx="620.5" cy="393.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M623.266 389.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="30" x="638.5" y="398.41">Menu</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M588.5 409.5h100M588.5 417.5h100"/>
+  <circle cx="598.5" cy="428.5" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="76" x="607.5" y="432.919">Settings() : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M3295.5 110.5h368v61.836h-368z"/>
+  <circle cx="3442.25" cy="126.5" fill="#B4A7E5" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M3443.203 123.14v6.657h1.719q.61 0 .875.234.265.235.265.625 0 .375-.265.61-.266.234-.875.234h-5.14q-.61 0-.876-.234-.265-.235-.265-.625 0-.375.265-.61.266-.234.875-.234h1.719v-6.656h-1.719q-.61 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.234.875-.234h5.14q.61 0 .876.235.265.234.265.61 0 .39-.265.624-.266.235-.875.235h-1.719Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="66" x="3462.75" y="131.41">IRoomBase</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M3296.5 142.5h366M3296.5 150.5h366"/>
+  <text font-family="sans-serif" font-size="11" textLength="356" x="3301.5" y="165.919">RoomBase(player:Player, room:RoomFlags, currentRun:CurrentRun) : void</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M5905 617.5h235v103.344h-235z"/>
+  <circle cx="5985.75" cy="633.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M5988.516 629.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.171.656.157 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="65" x="6006.25" y="638.41">RoomFlags</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5906 649.5h233"/>
+  <circle cx="5916" cy="660.5" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="155" x="5925" y="664.919">clear1 : bool «get» «set» = false</text>
+  <circle cx="5916" cy="674.336" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="155" x="5925" y="678.755">clear2 : bool «get» «set» = false</text>
+  <circle cx="5916" cy="688.172" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="155" x="5925" y="692.591">clear3 : bool «get» «set» = false</text>
+  <circle cx="5916" cy="702.008" style="stroke:#038048;stroke-width:1;fill:none" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="209" x="5925" y="706.427">specialInteraction : bool «get» «set» = false</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5906 712.844h233"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M5784 357h185v103.344h-185z"/>
+  <circle cx="5838.25" cy="373" fill="#B4A7E5" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M5839.203 369.64v6.657h1.719q.61 0 .875.234.266.235.266.625 0 .375-.266.61-.266.234-.875.234h-5.14q-.61 0-.876-.234-.265-.235-.265-.625 0-.375.265-.61.266-.234.875-.234h1.719v-6.656h-1.719q-.61 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.233.875-.233h5.14q.61 0 .876.234t.266.61q0 .39-.266.624-.266.235-.875.235h-1.719Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="68" x="5858.75" y="377.91">IRoomFlags</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5785 389h183"/>
+  <text font-family="sans-serif" font-size="11" textLength="119" x="5790" y="404.419">clear1 : bool «get» «set»</text>
+  <text font-family="sans-serif" font-size="11" textLength="119" x="5790" y="418.255">clear2 : bool «get» «set»</text>
+  <text font-family="sans-serif" font-size="11" textLength="119" x="5790" y="432.091">clear3 : bool «get» «set»</text>
+  <text font-family="sans-serif" font-size="11" textLength="173" x="5790" y="445.927">specialInteraction : bool «get» «set»</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5785 452.344h183"/>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M3835 377.5h353v61.836h-353z"/>
+  <circle cx="3976.25" cy="393.5" fill="#A9DCDF" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M3978.438 395.266h-4.141l-.422 1.03h.422q.61 0 .875.235t.265.625q0 .375-.265.61-.266.234-.875.234H3972q-.61 0-.86-.234-.265-.235-.265-.625 0-.375.281-.61.266-.25.89-.234l2.673-6.656h-1.11q-.609 0-.875-.235-.265-.234-.265-.625 0-.375.265-.61.266-.233.875-.233h3.672l3.39 8.359q.595 0 .782.14.39.266.39.72 0 .374-.265.609-.25.234-.86.234h-2.296q-.61 0-.875-.234-.266-.235-.266-.625 0-.375.266-.61.265-.234.875-.234h.422l-.407-1.031Zm-.72-1.704-1.359-3.375-1.375 3.375h2.735Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="62" x="3996.75" y="398.41">RoomBase</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M3836 409.5h351M3836 417.5h351"/>
+  <circle cx="3846" cy="428.5" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="327" x="3855" y="432.919">RoomBase(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M5529.5 634h340v70.023h-340z"/>
+  <circle cx="5671.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M5674.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.172.656.156 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="5691.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="5691.75" y="666.551">Room_1</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5530.5 674.188h338M5530.5 682.188h338"/>
+  <circle cx="5540.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="5549.5" y="697.606">Room_1(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M2529.5 634h340v70.023h-340z"/>
+  <circle cx="2671.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M2674.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="2691.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="2691.75" y="666.551">Room_2</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M2530.5 674.188h338M2530.5 682.188h338"/>
+  <circle cx="2540.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="2549.5" y="697.606">Room_2(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M2904.5 634h340v70.023h-340z"/>
+  <circle cx="3046.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M3049.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="3066.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="3066.75" y="666.551">Room_3</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M2905.5 674.188h338M2905.5 682.188h338"/>
+  <circle cx="2915.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="2924.5" y="697.606">Room_3(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M3279.5 634h340v70.023h-340z"/>
+  <circle cx="3421.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M3424.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="3441.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="3441.75" y="666.551">Room_4</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M3280.5 674.188h338M3280.5 682.188h338"/>
+  <circle cx="3290.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="3299.5" y="697.606">Room_4(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M3654.5 634h340v70.023h-340z"/>
+  <circle cx="3796.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M3799.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.329-.625.734 0 1.374.172.657.156 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="3816.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="3816.75" y="666.551">Room_5</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M3655.5 674.188h338M3655.5 682.188h338"/>
+  <circle cx="3665.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="3674.5" y="697.606">Room_5(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M4029.5 634h340v70.023h-340z"/>
+  <circle cx="4171.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M4174.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.172.656.156 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="4191.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="4191.75" y="666.551">Room_6</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M4030.5 674.188h338M4030.5 682.188h338"/>
+  <circle cx="4040.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="4049.5" y="697.606">Room_6(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M4404.5 634h340v70.023h-340z"/>
+  <circle cx="4546.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M4549.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.172.656.156 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="4566.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="4566.75" y="666.551">Room_7</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M4405.5 674.188h338M4405.5 682.188h338"/>
+  <circle cx="4415.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="4424.5" y="697.606">Room_7(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M4779.5 634h340v70.023h-340z"/>
+  <circle cx="4921.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M4924.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.172.656.156 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="4941.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="4941.75" y="666.551">Room_8</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M4780.5 674.188h338M4780.5 682.188h338"/>
+  <circle cx="4790.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="4799.5" y="697.606">Room_8(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M5154.5 634h340v70.023h-340z"/>
+  <circle cx="5296.25" cy="654.094" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M5299.016 649.969q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.452q0 .61-.234.875-.234.266-.61.266-.343 0-.546-.203-.203-.188-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.219-1.234-.219-.766 0-1.406.328-.625.329-1.125 1.079-.485.75-.485 1.78v1.095q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.157.813-.594.265-.266.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.593 0 .344-.344.75-.5.578-1.297.907-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.36v-1.155q0-1.328.61-2.47.625-1.155 1.718-1.765 1.094-.625 2.328-.625.735 0 1.376.172.656.156 1.203.516Z"/>
+  <text font-family="sans-serif" font-size="12" font-style="italic" textLength="48" x="5316.75" y="651.457">«partial»</text>
+  <text font-family="sans-serif" font-size="12" textLength="48" x="5316.75" y="666.551">Room_9</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M5155.5 674.188h338M5155.5 682.188h338"/>
+  <circle cx="5165.5" cy="693.188" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" textLength="314" x="5174.5" y="697.606">Room_9(player:Player, room:RoomFlags, currentRun:CurrentRun)</text>
+  <path fill="#FEFECE" filter="url(#a)" style="stroke:#a80036;stroke-width:1.5" d="M724.5 377.5h282v61.836h-282z"/>
+  <circle cx="838.25" cy="393.5" fill="#ADD1B2" style="stroke:#a80036;stroke-width:1" r="11"/>
+  <path d="M841.016 389.375q.156-.219.343-.328.188-.11.407-.11.375 0 .609.266.234.25.234.86v1.453q0 .609-.234.875-.234.265-.61.265-.343 0-.546-.203-.203-.187-.313-.703-.047-.36-.234-.547-.328-.375-.938-.594-.609-.218-1.234-.218-.766 0-1.406.328-.625.328-1.125 1.078-.485.75-.485 1.781v1.094q0 1.234.891 2.062.89.813 2.484.813.938 0 1.594-.25.39-.156.813-.594.265-.265.406-.344.156-.078.36-.078.327 0 .577.266.266.25.266.594 0 .343-.344.75-.5.578-1.297.906-1.078.453-2.375.453-1.515 0-2.718-.625-.985-.5-1.672-1.563-.688-1.078-.688-2.359v-1.156q0-1.328.61-2.469.625-1.156 1.718-1.765 1.094-.625 2.328-.625.735 0 1.375.171.657.157 1.204.516Z"/>
+  <text font-family="sans-serif" font-size="12" textLength="46" x="858.75" y="398.41">Machine</text>
+  <path style="stroke:#a80036;stroke-width:1.5" d="M725.5 409.5h280M725.5 417.5h280"/>
+  <circle cx="735.5" cy="428.5" fill="#84BE84" style="stroke:#038048;stroke-width:1" r="3"/>
+  <text font-family="sans-serif" font-size="11" text-decoration="underline" textLength="256" x="744.5" y="432.919">«async» MachineActivationWithoutPassword() : void</text>
+  <path d="M1260.5 185.82v191.27M1253.5 185.55l7-20 7 20h-14zM394.06 141.5h9.47" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m416.74 141.5-9-4 4 4-4 4 9-4z"/>
+  <path style="stroke:#a80036;stroke-width:1" d="M411.74 141.5h-8"/>
+  <path fill="#FFF" style="stroke:#a80036;stroke-width:1" d="m382.06 141.5 6 4 6-4-6-4-6 4z"/>
+  <text font-family="sans-serif" font-size="13" textLength="55" x="389.744" y="136.565">TextColor</text>
+  <path d="M1398.5 176.6v202.67" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1398.5 384.42 4-9-4 4-4-4 4 9z"/>
+  <text font-family="sans-serif" font-size="13" textLength="52" x="1339.838" y="373.74">ApiClient</text>
+  <path d="M1464.04 715.38c-36.87 43.5-91.06 107.42-119.85 141.39M1458.73 710.82l18.27-10.73-7.6 19.78-10.67-9.05zM1487.67 719.45l-41.2 137.32M1481.02 717.23l12.45-17.14.96 21.17-13.41-4.03zM1517.57 719.45c13.21 43.33 31.82 104.39 41.85 137.32M1510.8 721.26l.87-21.17 12.53 17.09-13.4 4.08zM1540.34 715.66c36.03 43.5 88.83 107.21 116.91 141.11M1534.8 719.95l-7.37-19.86 18.15 10.93-10.78 8.93zM1564.18 500.17c-17.67 48.08-38.22 104-50.58 137.62M1557.69 497.52l13.47-16.36-.33 21.19-13.14-4.83zM1659.27 233.38c-11.87 33.44-25.13 70.82-36.31 102.35M1652.78 230.72l13.28-16.51-.09 21.19-13.19-4.68zM1666.82 481.08c16.35 18.71 32.99 39.41 46.68 59.92 11.93 17.87 22.95 38.38 32.29 57.63" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1748.13 603.49-.283-9.845-1.878 5.336-5.336-1.878 7.497 6.387z"/>
+  <text font-family="sans-serif" font-size="13" textLength="60" x="1681.497" y="592.505">entityType</text>
+  <path d="M1709.69 214.28c8.72 36.3 18.77 81.16 25.81 121.72 15.62 90.03 27.15 194.86 33.72 262.25" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1769.72 603.44 3.106-9.346-3.592 4.37-4.37-3.592 4.856 8.568z"/>
+  <text font-family="sans-serif" font-size="13" textLength="60" x="1772.52" y="592.449">entityType</text>
+  <path d="M1737.35 456.84c84.39 29.18 183.25 64.64 224.15 84.16 5.96 2.84 11.97 5.81 18 8.87M1734.83 463.37l-16.63-13.13 21.19-.1-4.56 13.23zM1991.58 184.39c-21.65 53.64-58.66 145.29-77.8 192.7M1985.21 181.48l13.98-15.93-1 21.17-12.98-5.24zM1901.5 439.66V639.7" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1901.5 644.85 4-9-4 4-4-4 4 9z"/>
+  <text font-family="sans-serif" font-size="13" textLength="75" x="1817.412" y="633.963">TimeOfDeath</text>
+  <path d="M2025.42 184.39c21.65 53.64 58.66 145.29 77.8 192.7M2018.81 186.72l-1-21.17 13.98 15.93-12.98 5.24zM2070.87 439.64c-33.43 24.31-78.52 61-109.37 101.36-23.42 30.64-40.81 71.89-50.67 98.95" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1909.08 644.83 6.804-7.121-5.116 2.415-2.415-5.116.727 9.822z"/>
+  <text font-family="sans-serif" font-size="13" textLength="75" x="1903.028" y="634.158">TimeOfDeath</text>
+  <path d="M2069.21 439.56c-21.88 13.56-48.64 29.23-73.71 41.44-66.41 32.35-100.13 10.54-155 60-17.36 15.65-30.76 37.02-40.75 57.76" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m1797.54 603.45 7.448-6.444-5.321 1.919-1.919-5.322-.208 9.847z"/>
+  <text font-family="sans-serif" font-size="13" textLength="99" x="1827.05" y="593.275">DeadEnemyType</text>
+  <path d="M3295.18 169.92c-163.72 28.45-407.12 80.94-605.68 166.08-122.97 52.73-249.62 133.35-346.91 201.93" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m2338.27 540.98 9.663-1.902-5.572-.973.972-5.573-5.063 8.448z"/>
+  <text font-family="sans-serif" font-size="13" textLength="35" x="2312.366" y="530.211">player</text>
+  <path d="M3663.93 143.43c550.93 4.59 2156.7 31.76 2322.57 192.57 73.37 71.14 62.77 201.71 49.05 276.15" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m6034.56 617.41 5.601-8.1-4.673 3.187-3.187-4.673 2.259 9.586z"/>
+  <text font-family="sans-serif" font-size="13" textLength="29" x="6005.217" y="606.526">room</text>
+  <path d="M3415.08 172.55c-133.21 61.61-449.3 205.17-721.58 308.45-79.63 30.21-117.3 4.61-182 60-30.59 26.19-48.54 70.34-57.57 99.08" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m2452.45 644.9 6.448-7.445-4.992 2.662-2.661-4.992 1.205 9.775z"/>
+  <text font-family="sans-serif" font-size="13" textLength="63" x="2382.903" y="634.215">currentRun</text>
+  <path d="M3557.76 181.49c106.94 53.26 296.45 147.66 393.22 195.86M3554.53 187.7l-14.78-15.19 21.02 2.65-6.24 12.54zM3835 413.47c-364.39 9.86-1188.05 41.22-1454.5 127.53-4.06 1.32-8.13 2.73-12.2 4.22" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m2363.53 547.01 9.831.585-5.15-2.34 2.341-5.15-7.022 6.905z"/>
+  <text font-family="sans-serif" font-size="13" textLength="35" x="2371.715" y="539.443">player</text>
+  <path d="M4188.04 415.17C4625.09 430.16 5733.3 474.31 5886.5 541c36.28 15.79 68.97 45.54 93.21 72.28" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m5983.22 617.2-3.03-9.371-.308 5.648-5.648-.308 8.986 4.031z"/>
+  <text font-family="sans-serif" font-size="13" textLength="29" x="5946.993" y="606.66">room</text>
+  <path d="M3834.99 420.41c-384.8 24.4-1269.3 84.1-1323.49 120.59-33.89 22.82-51.09 68.96-59.04 98.9" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path fill="#A80036" style="stroke:#a80036;stroke-width:1" d="m2451.17 644.92 6.106-7.727-4.866 2.883-2.884-4.867 1.644 9.711z"/>
+  <text font-family="sans-serif" font-size="13" textLength="63" x="2458.817" y="633.926">currentRun</text>
+  <path d="M5915.13 477.9c24.73 43.79 56.28 99.64 78.76 139.45M5908.91 481.12l-3.74-20.86 15.93 13.97-12.19 6.89zM4208.11 414.85C4555.25 426.12 5261.7 458.45 5494.5 541c57.54 20.4 114.32 62.66 153.94 92.82M4207.82 421.84l-19.77-7.63 20.22-6.36-.45 13.99z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M4208.41 414.21C4562.68 424.88 5292.19 456.85 5529.5 541c57.54 20.4 114.32 62.66 146.18 92.82M4208 421.2l-19.79-7.58 20.2-6.41-.41 13.99zM3814.6 420.48c-280 17.99-777.48 58.1-945.1 120.52-56.82 21.16-113.17 63.04-145.18 92.92M3814.38 413.48l20.41 5.72-19.52 8.25-.89-13.97z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M3814.9 421.99C3543 440.65 3067.59 480.27 2904.5 541c-56.82 21.16-113.17 63.04-152.87 92.92M3814.49 415l20.43 5.62-19.48 8.35-.95-13.97z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M3814.95 420c-159.08 13.93-385.99 46.24-570.45 121-55.65 22.55-111.57 63.51-143.94 92.82M3814.46 413.01l20.52 5.3-19.34 8.66-1.18-13.96z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M3814.67 422.71c-150.9 15.25-361.79 48.02-535.17 118.29-55.65 22.55-111.57 63.51-151.41 92.82M3814.04 415.74l20.59 5.02-19.23 8.91-1.36-13.93zM3868.44 445.38c-76.19 22.94-170.02 55.84-248.94 95.62-52.21 26.32-107 65.03-140.32 92.78M3866.75 438.58l21.17 1.04-17.19 12.39-3.98-13.43z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M3898.14 445.68c-71.69 22.92-165.06 55.71-243.64 95.32-52.21 26.32-107 65.03-147.22 92.78M3896.11 438.98l21.18.64-16.96 12.71-4.22-13.35zM3968.25 455.44c-40.99 51.18-99.63 132.72-128.08 178.5M3963.06 450.72l18.08-11.06-7.23 19.92-10.85-8.86zM3988.02 456.78c-33 51.25-91.66 131.78-129.39 177.16M3982.19 452.9l16.54-13.24-4.68 20.67-11.86-7.43zM4035.76 456.78c33.42 51.25 92.37 131.78 130.01 177.16M4029.7 460.29l-4.81-20.63 16.63 13.13-11.82 7.5zM4055.25 455.11c41.43 51.15 100.56 132.95 128.97 178.83M4049.83 459.53l-7.35-19.87 18.14 10.96-10.79 8.91zM4125.31 445.63c71.85 22.95 165.42 55.78 244.19 95.37 52.44 26.35 107.52 65.05 147.76 92.8M4123.08 452.26l-16.96-12.7 21.18-.65-4.22 13.35z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M4154.98 445.33c76.38 22.97 170.41 55.91 249.52 95.67 52.44 26.35 107.52 65.05 140.86 92.8M4152.66 451.94l-17.2-12.38 21.16-1.04-3.96 13.42zM4208.34 422.76c151.1 15.28 362.4 48.06 536.16 118.24 55.88 22.57 112.12 63.52 151.96 92.83M4207.59 429.72l-19.23-8.91 20.59-5.02-1.36 13.93z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M4208.42 420.08C4367.7 434.07 4594.8 466.41 4779.5 541c55.88 22.57 112.12 63.52 144.48 92.83M4207.7 427.05l-19.33-8.66 20.51-5.29-1.18 13.95z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M4208.19 422.01c272.11 18.71 748.03 58.42 911.31 118.99 57.06 21.17 113.72 63.04 153.42 92.92M4207.63 428.98l-19.48-8.34 20.43-5.62-.95 13.96z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+  <path d="M4208.46 420.5c280.23 18.04 778.23 58.25 946.04 120.5 57.06 21.17 113.72 63.04 145.72 92.92M4207.77 427.47l-19.51-8.26 20.4-5.71-.89 13.97z" fill="none" style="stroke:#a80036;stroke-width:1"/>
+</svg>
