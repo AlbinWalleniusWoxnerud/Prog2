@@ -23,6 +23,7 @@ internal class Menu
                 {
                     case 1:
                         TextRender.Delay = 0;
+                        TextRender.Speed = 0;
                         break;
                     case 2:
                         goto start;

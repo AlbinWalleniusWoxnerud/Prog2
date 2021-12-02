@@ -13,8 +13,8 @@ public static class TextRender
     {
         //If player changed settings change them here, because otherwise it will cause a compile time error
         color = color != Color.Magenta ? color : TextColor;
-        delay = delay == 0 ? delay : Delay;
-        speed = speed == 30 ? speed : Speed;
+        delay = Delay == 0 ? delay : Delay;
+        speed = Speed == 30 ? speed : Speed;
 
         Console.ForegroundColor = (System.ConsoleColor)color;
         foreach (char letter in text)
