@@ -1,0 +1,2 @@
+C:\githubschool\Prog2\project\bin\Release\net6.0\win-x64\publish\project.pdb
+C:\githubschool\Prog2\project\bin\Release\net6.0\win-x64\publish\project.exe
